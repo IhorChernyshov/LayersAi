@@ -74,7 +74,7 @@
   // .features-one__text
   &__text {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     @include adaptiveValue("font-size", 19, 17);
     color: #8b8b8b;
     max-width: rem(635);

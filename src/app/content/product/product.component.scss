@@ -3,6 +3,7 @@
 
 
 .product {
+
   background: #070707;
   @include adaptiveValue("padding-bottom", 220, 90);
   // .product__contain

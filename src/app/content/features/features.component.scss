@@ -2,8 +2,9 @@
 @import '../../../assets/style/common';
 
 .features {
+  position: relative;
   background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
-  padding-bottom: rem(200);
+  @include adaptiveValue("padding-bottom", 220, 90);
   // .features__container
   &__container {
   }
@@ -41,6 +42,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    //@include adaptiveValue("margin-bottom", 55, 30);
   }
 
   &__aus{
@@ -67,5 +70,21 @@
   &__item-two-component {
 
   }
+
+  // .features__logo-component
+  &__logo-component {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  // .features__design-txt-component
+  &__design-txt-component {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
 
 }

@@ -108,7 +108,7 @@
     @include adaptiveValue("margin-bottom", 85, 30);
   }
 
-  &--features{
+  &--aus{
     font-weight: 500;
     @include adaptiveValue("font-size", 32, 20);
     letter-spacing: rem(1.6);

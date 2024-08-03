@@ -5,6 +5,8 @@ import {FeaturesSubtitleComponent} from "./features-subtitle/features-subtitle.c
 import {FeaturesItemOneComponent} from "./features-item-one/features-item-one.component";
 import {FeaturesItemTwoComponent} from "./features-item-two/features-item-two.component";
 import {FeaturesAusComponent} from "./features-aus/features-aus.component";
+import {FeaturesDesignTextComponent} from "./features-design-text/features-design-text.component";
+import {ProductLogoComponent} from "../product/product-logo/product-logo.component";
 
 @Component({
   selector: 'app-features',
@@ -15,7 +17,9 @@ import {FeaturesAusComponent} from "./features-aus/features-aus.component";
     FeaturesSubtitleComponent,
     FeaturesItemOneComponent,
     FeaturesItemTwoComponent,
-    FeaturesAusComponent
+    FeaturesAusComponent,
+    FeaturesDesignTextComponent,
+    ProductLogoComponent
   ],
   templateUrl: './features.component.html',
   styleUrl: './features.component.scss'
