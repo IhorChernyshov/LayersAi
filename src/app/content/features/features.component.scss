@@ -1,0 +1,71 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+.features {
+  background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
+  padding-bottom: rem(200);
+  // .features__container
+  &__container {
+  }
+
+  // .features__body
+  &__body {
+  }
+
+  // .features__content
+  &__content {
+  }
+
+  // .features__components
+  &__components {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .features__title-component
+  &__title-component {
+    display: flex;
+    justify-content: center;
+    padding-top: rem(50);
+    @include adaptiveValue("margin-bottom", 35, 20);
+  }
+
+  // .features__subtitle-component
+  &__subtitle-component {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("margin-bottom", 75, 30);
+  }
+
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__aus{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    justify-content: center;
+  }
+
+  &__together {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(30);
+    flex-wrap: wrap;
+  }
+
+  // .features__item-one-component
+  &__item-one-component {
+
+  }
+
+  // .features__item-two-component
+  &__item-two-component {
+
+  }
+
+}

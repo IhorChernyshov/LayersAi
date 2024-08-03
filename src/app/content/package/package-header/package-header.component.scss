@@ -1,0 +1,64 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.package-header {
+  position: relative;
+  z-index: 3;
+  margin-top: rem(-100);
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(7, 7, 7, 1) 100%);
+  // .package-header__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(46) rem(25);
+  }
+
+  // .package-header__title
+  &__title {
+  }
+}
+
+.title-header {
+  display: flex;
+  align-items: center;
+  column-gap: rem(5);
+  // .title-header__star
+  &__star {
+  }
+
+  // .title-header__title
+  &__title {
+  }
+}
+
+.package {
+  // .package__header
+  &__header {
+    // .package__header__body
+    &__body {
+    }
+  }
+}
+
+.body-btn {
+  position: relative;
+  // .body-btn__btn
+  &__btn {
+    border: rem(1) solid #fff;
+    border-radius: rem(25);
+    padding: rem(14) rem(25);
+  }
+
+  // .body-btn__link
+  &__link {
+  }
+
+  // .body-btn__arrow
+  &__arrow {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+  }
+}

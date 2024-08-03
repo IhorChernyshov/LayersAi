@@ -1,0 +1,32 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+
+.hero-text {
+  position: relative;
+  //margin-bottom: rem(100);
+  @include adaptiveValue("margin-bottom", 50, 20, 1200, 768.98, 1);
+  // .hero-text__container
+  &__container {
+  }
+
+
+  // .hero-text__description
+  &__description {
+  }
+}
+
+.desc-hero-text {
+  // .desc-hero-text__body
+  &__body {
+    opacity: 0;
+    transition: all 0.8s ease 1.2s;
+    &.loaded{
+      opacity: 1;
+    }
+  }
+
+  // .desc-hero-text__text
+  &__text {
+  }
+}

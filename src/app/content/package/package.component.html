@@ -1,0 +1,33 @@
+<div class="package">
+  <app-package-header></app-package-header>
+  <div class="package__container">
+    <div class="package__body">
+
+      <ul class="package__components" [class.loaded]="isLoading">
+        <ul class="package__together">
+          <li class="package___title-component " [class.loaded]="isLoading">
+            <app-package-title></app-package-title>
+          </li>
+          <ul class="package__flex-item">
+          <li class="package___item-one-component item" [class.loaded]="isLoading">
+            <app-package-item-one></app-package-item-one>
+          </li>
+          <li class="package___item-two-component item" [class.loaded]="isLoading">
+            <app-package-item-two></app-package-item-two>
+          </li>
+          </ul>
+          <ul class="package__message-together">
+            <div class="package__bg"></div>
+          <li class="package__message-title-component item" [class.loaded]="isLoading">
+            <app-package-message-title></app-package-message-title>
+          </li>
+            <li class="package__message-component item" [class.loaded]="isLoading">
+            <app-package-message></app-package-message>
+          </li>
+          </ul>
+        </ul>
+      </ul>
+
+    </div>
+  </div>
+</div>

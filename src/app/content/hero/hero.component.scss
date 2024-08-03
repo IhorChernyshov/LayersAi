@@ -1,0 +1,162 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  //display: grid;
+  //grid-template-columns: 15px 1fr minmax(auto, 1570px) 1fr 15px;
+  background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
+  padding-bottom: rem(200);
+
+  // .hero__components
+  &__components {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  // .hero__title-component
+  &__title-component {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+    &.loaded{
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      transition: all 1s ease 1.3s;
+    }
+    &.load{
+      position: relative;
+      height: unset;
+    }
+  }
+
+  // .hero__design-component
+  &__design-component {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 1;
+    &.loaded{
+      opacity: 0;
+    }
+    &.load{
+      opacity: 1;
+      transition: all 0.5s ease 0s;
+    }
+  }
+
+  // .hero__text-component
+  &__text-component {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    &.load{
+      opacity: 1;
+      transition: all 1s ease 0.2s;
+    }
+  }
+
+  // .hero__video-component
+  &__video-component {
+    opacity: 1;
+    &.loaded{
+      opacity: 0;
+    }
+    &.load{
+      opacity: 1;
+      transition: all 1s ease 0.3s;
+    }
+  }
+
+  // .hero__design-number-component
+  &__design-number-component {
+
+    text-align: right;
+    @media (min-width: $mobile) {
+      padding-right: rem(20);
+    }
+    @media (max-width: em(1050)) {
+      padding-top: rem(40);
+    }
+    opacity: 1;
+    &.loaded{
+      opacity: 0;
+    }
+    &.load{
+      opacity: 1;
+      //visibility: visible;
+      transition: all 0.5s ease 0.4s;
+    }
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: rem(100);
+    @include adaptiveValue("margin-bottom", 100, 15, 1200, 320, 1);
+  }
+
+}
+
+.chip {
+  padding-top: rem(130);
+  margin-bottom: rem(16);
+  @include adaptiveValue("padding-top", 130, 100, 767.98, 320);
+  @include adaptiveValue("margin-bottom", 16, 25, 991.98, 320);
+  // .chip__content
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    opacity: 0;
+    transition: all 0.8s ease 0.8s;
+    &.loaded{
+      opacity: 1;
+    }
+    &.load{
+      opacity: 1;
+    }
+  }
+
+  // .chip__icon
+  &__icon {
+    width: rem(40);
+    height: rem(40);
+    @include adaptiveValue("width", 40, 25, 1200, 320, 1);
+    @include adaptiveValue("height", 40, 25, 1200, 320, 1);
+  }
+
+  // .chip__texts
+  &__texts {
+    display: grid;
+    gap: rem(10);
+  }
+}
+
+
+.year__block {
+  display: flex;
+  justify-content: flex-end;
+  margin: rem(0) rem(10);
+  padding: rem(0) rem(10);
+}
+
+.hero-text__year {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  //background-image: url(../../../assets/images/klyaks.svg);
+  background-size: 100%;
+  padding: 45px;
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+
+
+}

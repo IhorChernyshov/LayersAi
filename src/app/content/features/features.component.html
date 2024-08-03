@@ -1,0 +1,32 @@
+<div class="features">
+  <app-features-header></app-features-header>
+  <div class="features__container">
+    <div class="features__body">
+      <div class="features__content" [class.loaded]="isLoading">
+        <ul class="features__components">
+          <li class="features__title-component">
+            <app-features-title></app-features-title>
+          </li>
+          <li class="features__subtitle-component">
+            <app-features-subtitle></app-features-subtitle>
+          </li>
+          <ul class="features__flex">
+            <ul class="features__aus">
+              <li class="features__tablet-component">
+                <app-features-aus></app-features-aus>
+              </li>
+            </ul>
+            <ul class="features__together">
+              <li class="features__item-one-component">
+                <app-features-item-one></app-features-item-one>
+              </li>
+              <li class="features__item-two-component">
+                <app-features-item-two></app-features-item-two>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

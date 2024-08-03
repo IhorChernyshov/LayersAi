@@ -1,0 +1,23 @@
+@import '../../../assets/style/style';
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  //background: radial-gradient(black, transparent);
+  //background-color: rgb(8, 8, 8);
+}
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.main {
+}
+
+
+

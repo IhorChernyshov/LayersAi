@@ -1,0 +1,42 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+.tech {
+  background: #070707;
+  @include adaptiveValue("padding-bottom", 180, 90);
+  // .tech__container
+  &__container {
+  }
+
+  // .tech__body
+  &__body {
+  }
+
+  // .tech__components
+  &__components {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .tech__together
+  &__together {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  // .tech___items-component
+  &___items-component {
+  }
+
+  // .tech___image-component
+  &___image-component {
+    max-width: rem(520);
+    width: 100%;
+    //height: 100%;
+  }
+}
+
+.item {
+}

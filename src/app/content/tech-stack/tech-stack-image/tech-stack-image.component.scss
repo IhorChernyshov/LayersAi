@@ -1,0 +1,26 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.tech-image {
+  // .tech-image__container
+  &__container {
+  }
+
+  // .tech-image__body
+  &__body {
+  }
+
+  // .tech-image__content
+  &__content {
+  }
+
+  // .tech-image__image
+  &__image {
+    aspect-ratio: 520/652;
+    max-width: rem(520);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 80%;
+  }
+}

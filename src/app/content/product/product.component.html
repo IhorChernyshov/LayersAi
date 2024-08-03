@@ -1,0 +1,32 @@
+<div class="product">
+  <app-product-header></app-product-header>
+  <div class="product__contain">
+    <div class="product__body">
+      <div class="product__bg"></div>
+      <div class="product__container">
+        <ul class="product__components" [class.loaded]="isLoading">
+          <li class="product__title-component item" [class.loaded]="isLoading">
+            <app-product-title></app-product-title>
+          </li>
+          <ul class="product__grid">
+            <ul class="product__together">
+              <li class="product__text-component item" [class.loaded]="isLoading">
+                <app-product-text></app-product-text>
+              </li>
+              <li class="product__input-component item" [class.loaded]="isLoading">
+                <app-product-input></app-product-input>
+              </li>
+            </ul>
+            <li class="product__bg-design-component item" [class.loaded]="isLoading">
+              <app-product-bg-design></app-product-bg-design>
+            </li>
+          </ul>
+          <li class="product__logo-component item" [class.loaded]="isLoading">
+            <app-product-logo></app-product-logo>
+            <app-product-design-text></app-product-design-text>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

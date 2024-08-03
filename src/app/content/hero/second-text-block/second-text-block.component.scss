@@ -1,0 +1,45 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.hero-text {
+  &__grid {
+    display: grid;
+    justify-items: center;
+    /*grid-template-columns: repeat(1, 750px);
+    @media (max-width: em(1100)) {
+      grid-template-columns: repeat(1, 450px);
+    }
+    @media (max-width: em(520)) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: initial;
+    }*/
+    @media (min-width: $mobile) {
+      justify-items: start;
+      margin-left: rem(25);
+    }
+  }
+
+  // .hero-text__description
+  &__description {
+  }
+}
+
+.desc-hero-text {
+  // .desc-hero-text__body
+  &__body {
+    padding: rem(20);
+  }
+
+  // .desc-hero-text__title
+  &__title {
+    font-size: rem(45);
+    @include adaptiveValue("font-size", 45, 25, 1200, 320.98, 1);
+  }
+
+  // .desc-hero-text__text
+  &__text {
+    font-size: rem(20);
+    @include adaptiveValue("font-size", 20, 15, 1200, 767.98, 1);
+  }
+}
+

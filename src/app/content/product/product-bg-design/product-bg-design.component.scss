@@ -1,0 +1,84 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.product-bg {
+  // .product-bg__container
+  &__container {
+  }
+
+  // .product-bg__content
+  &__content {
+  }
+
+  // .product-bg__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  // .product-bg__item-img
+  &__item-img {
+    position: relative;
+  }
+
+  &__bg {
+    max-width: rem(385);
+    aspect-ratio: 385/235;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+&__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  }
+
+  &__sec-line{
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+
+  // .product-bg__item
+  &__item {
+    max-width: rem(385);
+    background-color: #1C1C1C;
+    padding: rem(35) rem(10) rem(15) rem(10);
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      top: rem(10);
+      left: 0;
+      background-color: #281aa1;
+      //background-color: rgba(208, 206, 236, 0.55);
+    }
+  }
+
+  // .product-bg__design-txt
+  &__design-txt {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    letter-spacing: rem(0.5);
+    text-transform: uppercase;
+    font-size: rem(16);
+    background-image: url(../../../../assets/images/hero-title2.jpg);
+    background-size: 200%;
+    background-repeat: repeat;
+    animation: bg-animation 40s infinite alternate;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

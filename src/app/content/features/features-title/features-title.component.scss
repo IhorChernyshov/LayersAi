@@ -1,0 +1,53 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.features-title {
+  // .features-title__container
+  &__container {
+  }
+
+  // .features-title__body
+  &__body {
+  }
+
+  // .features-title__title
+  &__title {
+    display: flex;
+  }
+
+  // .features-title__txt-icon
+  &__txt-icon {
+    position: relative;
+    background-image: url(../../../../assets/images/blue-txt-bg.jpg);
+    //background-position: 263% 185%;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    img {
+      position: absolute;
+      width: 100%;
+      top: 110%;
+      left: 0;
+    }
+  }
+}
+
+.features {
+  // .features__title-box
+  &__title-box {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+  }
+}
+
+.title-header {
+  // .title-header__star
+  &__star {
+  }
+}
+
+.title {
+}

@@ -1,0 +1,34 @@
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__chip chip">
+      <div class="chip__body">
+        <div class="chip__content" [class.loaded]="isLoading" [class.load]="isLoaded">
+          <img src="/chip.png" alt="" class="chip__icon">
+          <div class="chip__texts">
+            <h1 class="chip__title chip-title">Australian law</h1>
+            <p class="chip__description chip-text">AI Assistant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="hero__components" [class.loaded]="isLoading" [class.load]="isLoaded">
+      <li class="hero__title-component item" [class.loaded]="isLoading" [class.load]="isLoaded">
+        <app-hero-title></app-hero-title>
+      </li>
+
+      <li class="hero__design-component item" [class.loaded]="isLoading" [class.load]="isLoaded">
+        <app-design-text></app-design-text>
+      </li>
+      <li class="hero__text-component item" [class.loaded]="isLoading" [class.load]="isLoaded">
+        <app-text-block></app-text-block>
+      </li>
+      <li class="hero__video-component" [class.loaded]="isLoading" [class.load]="isLoaded">
+        <app-video-chat></app-video-chat>
+      </li>
+      <li class="hero__design-number-component" [class.loaded]="isLoading" [class.load]="isLoaded">
+        <app-design-number></app-design-number>
+      </li>
+
+    </ul>
+  </div>
+</div>

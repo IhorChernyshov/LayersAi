@@ -1,0 +1,18 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.box-images {
+  // .box-images__one
+  &__one {
+    animation: rotate 30s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

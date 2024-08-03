@@ -1,0 +1,135 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+
+.pack-mes {
+  position: relative;
+  z-index: 2;
+  // .pack-mes__container
+  &__container {
+  }
+
+  // .pack-mes__body
+  &__body {
+  }
+
+  // .pack-mes__form
+  &__form {
+  }
+}
+
+.form {
+  // .form__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("row-gap", 20, 10);
+  }
+
+  // .form__input-box
+  &__input-box {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem(2);
+      height: 100%;
+      top: 0;
+      left: 83%;
+      z-index: 2;
+      background-color: #7c7c7c;
+      transition: all 0.3s ease 0s;
+    }
+    &:focus-within::after {
+      background-color: #D9D9D9;
+    }
+    &:hover::after {
+      background-color: #b7b6b6;
+    }
+
+  }
+
+  // .form__input
+  &__input {
+    background: #010312;
+    padding: rem(15) rem(70) rem(15) rem(20);
+    border-radius: rem(25) rem(25) rem(0) rem(0);
+  }
+
+  // .form__btn
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  // .form__link
+  &__link {
+    border-radius: rem(0) rem(25) rem(0) rem(0);
+    padding: rem(15) rem(15) rem(15) rem(15) ;
+    @include adaptiveValue("font-size", 16, 15);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #a3a3a3;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  // .form__textarea-box
+  &__textarea-box {
+  }
+
+  // .form__textarea
+  &__textarea {
+    background: #010312;
+    line-height: 142%;
+    padding: rem(15) rem(20) rem(15) rem(20);
+    border-radius: rem(0) rem(0) rem(25) rem(25);
+    resize: none;
+    max-height: rem(100);
+    &::placeholder {
+      letter-spacing: rem(0.8);
+    }
+  }
+}
+
+.message {
+  border: rem(2) solid #7c7c7c;
+  color: #FFFFFF;
+  @include adaptiveValue("width", 400, 250);
+  transition: border 0.3s ease 0s, padding-left 0.3s ease 0s;
+  position: relative;
+  z-index: 2;
+
+  &::placeholder {
+    @include adaptiveValue("font-size", 17, 15);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #929090;
+    transition: opacity 0.3s ease 0s;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  &:focus {
+    padding-left: rem(15);
+    border: rem(2) solid #D9D9D9;
+    outline: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border: rem(2) solid #b7b6b6;
+    }
+  }
+}

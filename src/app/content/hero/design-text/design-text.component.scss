@@ -1,0 +1,39 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+
+
+.des-text {
+  // .des-text__container
+  &__container {
+  }
+
+  // .des-text__body
+  &__body {
+  }
+
+  // .des-text__content
+  &__content {
+    opacity: 0;
+    transition: all 0.8s ease 1s;
+    &.loaded{
+      opacity: 1;
+    }
+  }
+
+  // .des-text__subtitle
+  &__subtitle {
+    display: flex;
+    align-items: flex-end;
+    white-space: nowrap;
+    font-size: rem(25);
+    @include adaptiveValue("font-size", 25, 17, 1200, 767.98, 1);
+    background-image: url(../../../../assets/images/hero-title2.jpg);
+    background-size: 200%;
+    background-repeat: repeat;
+    animation: bg-animation 40s infinite alternate;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

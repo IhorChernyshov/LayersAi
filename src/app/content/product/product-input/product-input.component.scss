@@ -1,0 +1,41 @@
+@import '../../../../assets/style/style';
+
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: rem(700);
+  border: rem(1) solid #f5f5f5;
+  padding: rem(10) rem(10) rem(10) rem(35);
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @include adaptiveValue("padding-top", 10, 2, 1200, 320);
+  @include adaptiveValue("padding-right", 10, 2, 1200, 320);
+  @include adaptiveValue("padding-left", 35, 10, 1200, 320);
+  @include adaptiveValue("padding-bottom", 10, 2, 1200, 320);
+  @include adaptiveValue("max-width", 700, 500, 1200, 320);
+  background: #070707;
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #D9D9D9;
+    @include adaptiveValue("font-size", 21, 18);
+    @include adaptiveValue("margin-right", 20, 5);
+  }
+
+  &__icon {
+    cursor: pointer;
+    background-color: rgba(208, 206, 236, 0.55);
+    padding: rem(10);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.material-symbols-outlined {
+  font-size: rem(24);
+  color: #fff;
+}

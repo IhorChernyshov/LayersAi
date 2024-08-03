@@ -1,0 +1,62 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+
+.pack-title {
+  position: relative;
+  z-index: 2;
+  // .pack-title__container
+  &__container {
+  }
+
+  // .pack-title__body
+  &__body {
+  }
+
+  // .pack-title__title-box
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .pack-title__mes-title
+  &__mes-title {
+    @include adaptiveValue("font-size", 54, 21);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    @include adaptiveValue("margin-bottom", 20, 12);
+    span{
+      @include adaptiveValue("font-size", 54, 21);
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  // .pack-title__subtitle-one
+  &__subtitle-one {
+    color: #BFBFBF;
+  }
+
+  // .pack-title__subtitle-two
+  &__subtitle-two {
+color: #949494;
+  }
+}
+
+.sub{
+  @include adaptiveValue("font-size", 18, 16);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-align: center;
+
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 8, 5);
+  }
+  &:last-child {
+    @include adaptiveValue("margin-bottom", 35, 15);
+  }
+}
