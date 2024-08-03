@@ -105,7 +105,6 @@
     font-size: rem(34);
     @include adaptiveValue("font-size", 34, 18, 1200, 320.98, 1);
     letter-spacing: rem(1.2);
-    //margin-bottom: rem(85);
     @include adaptiveValue("margin-bottom", 85, 30);
   }
 
