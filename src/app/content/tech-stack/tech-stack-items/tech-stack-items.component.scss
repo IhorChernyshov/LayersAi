@@ -13,15 +13,19 @@
 
   // .tech-items__list
   &__list {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(120);
+    row-gap: rem(140);
   }
 
   // .tech-items__item
   &__item {
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 158, 30);
+      //@include adaptiveValue("margin-bottom", 158, 30);
     }
   }
 
@@ -30,6 +34,10 @@
     display: flex;
     align-items: center;
     column-gap: rem(5);
+    img{
+      width: rem(25);
+      height: rem(25);
+    }
   }
 
   // .tech-items__title
@@ -38,9 +46,9 @@
     &::after {
       content: '';
       position: absolute;
-      width: 100%;
+      width: rem(200);
       height: rem(1);
-      top: calc(100% + 20px);
+      top: calc(100% + 13px);
       left: 0;
       background-color: #fff;
     }
@@ -48,8 +56,8 @@
 
   // .tech-items__text
   &__text {
-    max-width: rem(700);
-    @include adaptiveValue("padding-top", 45, 30);
+
+    @include adaptiveValue("padding-top", 26, 15);
     padding-left: rem(35);
   }
 }

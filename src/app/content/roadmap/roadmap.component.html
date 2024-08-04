@@ -1,0 +1,27 @@
+<app-roadmap-header></app-roadmap-header>
+<div class="roadmap">
+
+  <div class="roadmap__w-container">
+    <div class="roadmap__body">
+      <ul class="roadmap__components" [class.loaded]="isLoading">
+        <li class="roadmap__title-component item" [class.loaded]="isLoading">
+          <app-roadmap-title></app-roadmap-title>
+        </li>
+        <li class="roadmap__tablet-component item" [class.loaded]="isLoading">
+          <app-roadmap-tablet></app-roadmap-tablet>
+        </li>
+        <ul class="roadmap__together">
+          <li class="roadmap__main-line-component item" [class.loaded]="isLoading">
+            <app-roadmap-mian-line></app-roadmap-mian-line>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+    <div class="roadmap__container">
+      <li class="roadmap__design-txt-component item" [class.loaded]="isLoading">
+        <app-roadmap-design-txt></app-roadmap-design-txt>
+      </li>
+    </div>
+
+</div>

@@ -10,15 +10,15 @@ import {ProductLogoComponent} from "./product-logo/product-logo.component";
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [
-    ProductHeaderComponent,
-    ProductTextComponent,
-    ProductInputComponent,
-    ProductTitleComponent,
-    ProductBgDesignComponent,
-    ProductDesignTextComponent,
-    ProductLogoComponent
-  ],
+    imports: [
+        ProductHeaderComponent,
+        ProductTextComponent,
+        ProductInputComponent,
+        ProductTitleComponent,
+        ProductBgDesignComponent,
+        ProductDesignTextComponent,
+        ProductLogoComponent
+    ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

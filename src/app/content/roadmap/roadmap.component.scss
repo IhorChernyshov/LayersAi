@@ -1,0 +1,63 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+.roadmap {
+  background: #070707;
+  @include adaptiveValue("padding-bottom", 180, 90);
+  // .roadmap__container
+  &__container {
+    max-width: rem(2100);
+    //margin: 0 auto;
+    //padding: rem(0) rem(0);
+  }
+   // .roadmap__w-container
+  &__w-container {
+    max-width: rem(1672);
+    margin: 0 auto;
+    padding: rem(0) rem(15);
+  }
+
+
+  // .roadmap__body
+  &__body {
+  }
+
+  // .roadmap__components
+  &__components {
+  }
+
+  // .roadmap__title-component
+  &__title-component {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("padding-top", 50, 30);
+    @include adaptiveValue("margin-bottom", 80, 40);
+  }
+
+  // .roadmap__tablet-component
+  &__tablet-component {
+    margin-bottom: rem(150);
+  }
+
+  // .roadmap__together
+  &__together {
+  }
+
+  // .roadmap__bg-component
+  &__bg-component {
+  }
+
+  // .roadmap__main-line-component
+  &__main-line-component {
+  }
+
+  // .roadmap__design-txt-component
+  &__design-txt-component {
+    display: flex;
+    justify-content: flex-end;
+    @include adaptiveValue("padding-top", 170, 100);
+  }
+}
+
+.item {
+}

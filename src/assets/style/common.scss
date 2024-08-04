@@ -157,6 +157,14 @@
     font-size: rem(45);
     @include adaptiveValue("font-size", 45, 21, 1200, 320.98, 1);
   }
+
+  &--roadmap{
+    font-family: 'Roboto', sans-serif ;
+    font-weight: 700;
+    text-transform: none;
+    font-size: rem(40);
+    @include adaptiveValue("font-size", 40, 21, 1200, 320.98, 1);
+  }
 }
 
 
@@ -171,8 +179,8 @@
 .tech-title{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: rem(34);
-  @include adaptiveValue("font-size", 34, 23);
+  font-size: rem(25);
+  @include adaptiveValue("font-size", 25, 19);
 }
 .tech-text{
   font-family: 'Open Sans', sans-serif;
@@ -181,4 +189,12 @@
   @include adaptiveValue("font-size", 18, 16);
   color: #B4B4B4;
   line-height: 122%;
+  max-width: rem(290);
+  &--vector{
+    max-width: rem(320);
+  }
+  &--rag{
+    max-width: rem(360);
+  }
+
 }

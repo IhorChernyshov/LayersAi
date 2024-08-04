@@ -23,5 +23,4 @@ export class TechStackComponent implements OnInit {
       this.isLoading = true;
     }, 10);
   }
-
 }

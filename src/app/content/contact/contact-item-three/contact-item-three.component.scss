@@ -1,0 +1,58 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.contact-three {
+  // .contact-three__content
+  &__content {
+  }
+}
+
+.item-three {
+  // .item-three__body
+  &__body {
+  }
+
+  // .item-three__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: rem(340);
+  }
+
+  // .item-three__item
+  &__item {
+    @include adaptiveValue("padding-bottom", 40, 40);
+    border-bottom: rem(1) solid #8F8F8F;
+  }
+
+  // .item-three__title
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 25, 19);
+    line-height: 142%;
+    color: #C2C1C1;
+  }
+
+  // .item-three__city
+  &__city {
+  }
+
+  // .item-three__state
+  &__state {
+  }
+
+  // .item-three__email
+  &__email {
+  }
+}
+
+.txt {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  @include adaptiveValue("font-size", 17, 16);
+  line-height: 142%;
+  color: #FFF;
+}

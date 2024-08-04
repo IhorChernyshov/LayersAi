@@ -1,0 +1,30 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+.team {
+  background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
+  padding-bottom: rem(200);
+  // .team__container
+  &__container {
+  }
+
+  // .team__content
+  &__content {
+  }
+
+  // .team__components
+  &__components {
+  }
+
+  // .team__title-component
+  &__title-component {
+    display: flex;
+    justify-content: center;
+    padding-top: rem(60);
+    padding-bottom: rem(160);
+  }
+
+  // .team__item-one-component
+  &__item-one-component {
+  }
+}

@@ -6,6 +6,9 @@ import {ProductComponent} from "../product/product.component";
 import {TechStackComponent} from "../tech-stack/tech-stack.component";
 import {PackageComponent} from "../package/package.component";
 import {FeaturesComponent} from "../features/features.component";
+import {RoadmapComponent} from "../roadmap/roadmap.component";
+import {TeamComponent} from "../team/team.component";
+import {ContactComponent} from "../contact/contact.component";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +20,10 @@ import {FeaturesComponent} from "../features/features.component";
     ProductComponent,
     TechStackComponent,
     PackageComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    RoadmapComponent,
+    TeamComponent,
+    ContactComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

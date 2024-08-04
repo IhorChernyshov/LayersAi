@@ -1,0 +1,107 @@
+@import '../../../../assets/style/style';
+@import '../../../../assets/style/common';
+
+.team-images {
+  // .team-images__container
+  &__container {
+  }
+
+  // .team-images__body
+  &__body {
+  }
+
+  // .team-images__list
+  &__list {
+    display: flex;
+    column-gap: rem(30);
+    justify-content: space-around;
+  }
+
+  // .team-images__item
+  &__item {
+
+  }
+
+  // .team-images__content
+  &__content {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__img-box {
+    display: inline-flex;
+    border-radius: rem(10);
+    background: rgba(217, 217, 217, 0.1);
+  }
+
+  // .team-images__image
+  &__image {
+    padding: rem(10) rem(15) rem(10) ;
+    max-width: rem(220);
+    aspect-ratio: 220/200;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(10);
+  }
+
+  &__txt-box {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+
+  }
+
+  // .team-images__text
+  &__text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    @include adaptiveValue("font-size", 23, 19);
+    position: relative;
+    margin-bottom: rem(20);
+    line-height: rem(34);
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: rem(1);
+      top: calc(100% + 10px);
+      left: 0;
+      border-bottom: rem(1) solid #fff;
+    }
+  }
+
+  // .team-images__subtext
+  &__subtext {
+    @include adaptiveValue("font-size", 16, 16);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: rem(0.8);
+    color: #C9C9C9;
+  }
+
+  // .team-images__sills-list
+  &__sills-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: rem(5);
+    padding-top: rem(20);
+    @include adaptiveValue("padding-top", 20, 10);
+    max-width: rem(220);
+    line-height: rem(25);
+  }
+
+  // .team-images__skills-item
+  &__skills-item {
+    p{
+      @include adaptiveValue("font-size", 17, 16);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      letter-spacing: rem(0.8);
+      color: #afaeae;
+    }
+  }
+}

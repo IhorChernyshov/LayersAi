@@ -1,0 +1,47 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+.footer {
+  background-color: #0C0C0C;
+  padding: 150px 0;
+  border-top: 1px solid #4C4C4C;
+  color: #fff;
+  font-family: Arial, sans-serif;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    text-align: center;
+
+    &--logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &--highlighted {
+      border-color: #4C799E;
+      background: linear-gradient(90deg, #4C799E 0%, #3C5F80 40%, #2D3A4B 60%, #323232 100%);
+      box-shadow: 0 0 10px rgba(76, 121, 158, 1);
+    }
+  }
+
+  &__link {
+    margin: 5px 0;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

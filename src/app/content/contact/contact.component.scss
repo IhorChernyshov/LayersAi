@@ -1,0 +1,45 @@
+@import '../../../assets/style/style';
+@import '../../../assets/style/common';
+
+.contact {
+  background: #070707;
+  @include adaptiveValue("padding-bottom", 220, 90);
+  // .contact__container
+  &__container {
+  }
+
+  // .contact__content
+  &__content {
+  }
+
+  // .contact__components
+  &__components {
+  }
+
+
+  // .contact__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(40);
+    padding: rem(130) 0;
+  }
+
+  // .contact__item-one-component
+  &__item-one-component {
+  }
+
+  // .contact__item-two-component
+  &__item-two-component {
+  }
+
+  // .contact__item-three-component
+  &__item-three-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: rem(340);
+  }
+}
