@@ -12,4 +12,5 @@ import {RoadmapBgComponent} from "../roadmap-bg/roadmap-bg.component";
 })
 export class RoadmapMianLineComponent {
 
+    protected readonly document = document;
 }

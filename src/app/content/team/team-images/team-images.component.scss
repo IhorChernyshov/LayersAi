@@ -4,6 +4,16 @@
 .team-images {
   // .team-images__container
   &__container {
+    margin: 0 rem(110);
+    @media (max-width: em(869.98)) {
+      margin: 0 rem(90);
+    }
+    @media (max-width: em(452)) {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+      @include adaptiveValue("margin-left", 10, 0);
+    }
   }
 
   // .team-images__body
@@ -13,12 +23,50 @@
   // .team-images__list
   &__list {
     display: flex;
-    column-gap: rem(30);
+    column-gap: rem(150);
+    row-gap: rem(50);
     justify-content: space-around;
+    flex-wrap: wrap;
+    //@media (max-width: em(1039)) {
+    //  justify-content: space-around;
+    //}
+    @media (max-width: em(869.98)) {
+      flex-direction: column;
+    }
   }
 
   // .team-images__item
   &__item {
+    &:nth-child(1){
+      display: flex;
+      justify-content: flex-start;
+      @media (max-width: em(767.98)) {
+        justify-content: center;
+      }
+      @media (max-width: em(452)) {
+      justify-content: flex-start;
+    }
+    }
+    &:nth-child(2){
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: em(767.98)) {
+        justify-content: center;
+      }
+      @media (max-width: em(452)) {
+      justify-content: flex-start;
+    }
+    }
+    &:nth-child(3){
+      display: flex;
+      justify-content: flex-start;
+      @media (max-width: em(767.98)) {
+        justify-content: center;
+      }
+      @media (max-width: em(452)) {
+      justify-content: flex-start;
+    }
+    }
 
   }
 
@@ -40,6 +88,7 @@
     padding: rem(10) rem(15) rem(10) ;
     max-width: rem(220);
     aspect-ratio: 220/200;
+    @include adaptiveValue("max-width", 220, 170, 452, 320);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -57,7 +106,7 @@
   &__text {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    @include adaptiveValue("font-size", 23, 19);
+    @include adaptiveValue("font-size", 23, 17);
     position: relative;
     margin-bottom: rem(20);
     line-height: rem(34);
@@ -74,12 +123,13 @@
 
   // .team-images__subtext
   &__subtext {
-    @include adaptiveValue("font-size", 16, 16);
+    @include adaptiveValue("font-size", 16, 15);
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     white-space: nowrap;
     letter-spacing: rem(0.8);
     color: #C9C9C9;
+    @include adaptiveValue("letter-spacing", 0.8, 0.2);
   }
 
   // .team-images__sills-list
@@ -97,11 +147,12 @@
   // .team-images__skills-item
   &__skills-item {
     p{
-      @include adaptiveValue("font-size", 17, 16);
+      @include adaptiveValue("font-size", 17, 15);
       font-family: 'Oswald', sans-serif;
       font-weight: 600;
       letter-spacing: rem(0.8);
       color: #afaeae;
+      @include adaptiveValue("letter-spacing", 0.8, 0.2);
     }
   }
 }

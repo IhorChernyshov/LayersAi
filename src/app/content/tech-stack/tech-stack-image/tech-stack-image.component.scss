@@ -12,6 +12,8 @@
 
   // .tech-image__content
   &__content {
+    display: flex;
+    justify-content: center;
   }
 
   // .tech-image__image
@@ -22,5 +24,11 @@
     height: 100%;
     object-fit: cover;
     opacity: 80%;
+    @media (max-width: em(1318)) {
+      @include adaptiveValue("max-width", 450, 230);
+    }
+    @media (max-width: em(630)) {
+      @include adaptiveValue("max-width", 350, 170);
+    }
   }
 }

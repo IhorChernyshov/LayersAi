@@ -62,9 +62,12 @@
   &__btn {
     position: absolute;
     top: 50%;
-    left: 83%;
-    transform: translateY(-50%);
+    @include adaptiveValue("left", 335, 197);
+    transform: translate(-0%, -50%);
     z-index: 2;
+    @media (max-width: em(1348)) {
+      //transform: translate(-10%, -50%);
+    }
   }
 
   // .form__link

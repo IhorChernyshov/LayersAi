@@ -4,7 +4,7 @@
 
 .package {
   background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
-  padding-bottom: rem(200);
+  @include adaptiveValue("padding-bottom", 200, 80);
   // .package__container
   &__container {
   }
@@ -28,19 +28,19 @@
     display: flex;
     justify-content: space-around;
     gap: rem(30);
-    flex-wrap: wrap;
-    @media (max-width: em(859.98)) {
+
+    @media (max-width: em(664.98)) {
       align-items: center;
       flex-direction: column-reverse;
     }
-    @include adaptiveValue("margin-bottom", 150, 75);
+    @include adaptiveValue("margin-bottom", 150, 20);
   }
 
   // .package___title-component
   &___title-component {
     display: flex;
     justify-content: center;
-    padding-top: rem(100);
+    @include adaptiveValue("padding-top", 50, 40);
     padding-bottom: rem(50);
   }
 

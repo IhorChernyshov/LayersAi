@@ -3,12 +3,20 @@
 
 .timeline {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  column-gap: rem(250);
+  //column-gap: rem(250);
+  @include adaptiveValue("column-gap", 250, 20);
   padding: 20px 0;
   position: relative;
   z-index: 2;
+
+  @media (max-width: em(892)) {
+    display: grid;
+    align-items: flex-start;
+    height: rem(950);
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -16,15 +24,50 @@
     left: 0;
     right: 0;
     height: rem(3);
+    width: 100%;
     background: linear-gradient(90deg,
       #4C799E 0%,
       #3C5F80 40%,
       #2D3A4B 60%,
       #323232 100%);
     z-index: 1;
+    @media (max-width: em(892)) {
+      height: rem(940);
+      width: rem(3);
+      top: 0;
+      left: 5%;
+      transform: translateX(-15%);
+    }
   }
 
-  &__bg{
+  &__list-one {
+    @media (max-width: em(892)) {
+      position: absolute;
+      top: 0;
+      @include adaptiveValue("left", 63, 0.9);
+      row-gap: rem(70);
+    }
+  }
+
+  &__list-two {
+    @media (max-width: em(892)) {
+      position: absolute;
+      top: 38%;
+      @include adaptiveValue("left", 63, 0.9);
+      row-gap: rem(70);
+    }
+  }
+
+  &__list-three {
+    @media (max-width: em(892)) {
+      position: absolute;
+      top: 76%;
+      @include adaptiveValue("left", 63, 0.9);
+      row-gap: rem(70);
+    }
+  }
+
+  &__bg {
     position: absolute;
     width: 100%;
     top: -350%;
@@ -35,12 +78,23 @@
     opacity: 0.03;
     z-index: -1;
     object-fit: cover;
+    @media (max-width: em(892)) {
+      top: 62%;
+    }
+    @media (max-width: em(600)) {
+      position: relative;
+      z-index: -10;
+    }
   }
 
   &__item {
     position: relative;
     z-index: 2;
-    //text-align: center;
+    @media (max-width: em(892)) {
+      display: flex;
+
+
+    }
 
     &::before {
       content: '';
@@ -48,9 +102,14 @@
       top: 0;
       left: 25%;
       width: 2px;
-      //height: 100%;
       background-color: #4C799E;
       transform: translateX(-25%);
+      @media (max-width: em(892)) {
+        top: auto;
+        bottom: 0;
+        left: 15%;
+        transform: translateX(-15%);
+      }
     }
 
     // .timeline__list-one
@@ -79,30 +138,42 @@
     .timeline__circle {
       border-radius: 50%;
       background-color: #2D99FF;
-      width: rem(25);
-      height: rem(25);
+      @include adaptiveValue("width", 25, 19);
+      @include adaptiveValue("height", 25, 19);
       box-shadow: 0 0 rem(15) rgba(76, 121, 158, 1);
       position: relative;
       z-index: 3;
+      @media (max-width: em(892)) {
+        width: rem(25);
+        height: rem(22);
+      }
     }
 
     .timeline__half-circle {
       border-radius: 50%;
       border: rem(5) solid #2D99FF;
-      width: rem(25);
-      height: rem(25);
+      @include adaptiveValue("width", 25, 19);
+      @include adaptiveValue("height", 25, 19);
       box-shadow: 0 0 rem(7) rgba(76, 121, 158, 1);
       position: relative;
       z-index: 3;
+      @media (max-width: em(892)) {
+        width: rem(25);
+        height: rem(22);
+      }
     }
 
     .timeline__empty-circle {
       border-radius: 50%;
       border: rem(2) solid #2D99FF;
-      width: rem(25);
-      height: rem(25);
+      @include adaptiveValue("width", 25, 19);
+      @include adaptiveValue("height", 25, 19);
       position: relative;
       z-index: 3;
+      @media (max-width: em(892)) {
+        width: rem(25);
+        height: rem(22);
+      }
     }
 
     .timeline__line {
@@ -113,15 +184,76 @@
       height: 100px;
       border-left: 2px dotted #434750;
       transform: translateX(-50%);
+      @media (max-width: em(892)) {
+        display: none;
+        top: auto;
+        bottom: 0;
+        height: rem(50);
+      }
 
-      &--down {
+      /*&--down {
         top: 100%;
         height: 120px;
-      }
+        @media (max-width: em(1136)) {
+          height: rem(140);
+        }
+        @media (max-width: em(892)) {
+          top: auto;
+          bottom: 0;
+          height: rem(50);
+        }
+      }*/
 
       &--down-last {
         top: 100%;
         height: 95px;
+        @media (max-width: em(1175)) {
+          height: rem(125);
+        }
+        @media (max-width: em(892)) {
+          top: auto;
+          bottom: 0;
+          height: rem(50);
+        }
+      }
+
+      &--down-one {
+        top: 100%;
+        height: 125px;
+        @media (max-width: em(1138.98)) {
+          height: rem(150);
+        }
+        @media (max-width: em(892)) {
+          top: auto;
+          bottom: 0;
+          height: rem(50);
+        }
+      }
+
+      &--down-two {
+        top: 100%;
+        height: 125px;
+        @media (max-width: em(1151.98)) {
+          height: rem(150);
+        }
+        @media (max-width: em(892)) {
+          top: auto;
+          bottom: 0;
+          height: rem(50);
+        }
+      }
+
+      &--down-three {
+        top: 100%;
+        height: 95px;
+        @media (max-width: em(1344.98)) {
+          height: rem(125);
+        }
+        @media (max-width: em(892)) {
+          top: auto;
+          bottom: 0;
+          height: rem(50);
+        }
       }
 
     }
@@ -132,24 +264,94 @@
       left: calc(50% + 15px);
       transform: translateX(0%);
       color: #fff;
-      font-size: 14px;
       line-height: 1.5;
       font-family: 'Oswald', sans-serif;
       font-weight: 400;
       letter-spacing: rem(0.8);
-      max-width: rem(265);
+      width: rem(365);
       @include adaptiveValue("font-size", 20, 16);
-
-      p{
-        white-space: nowrap;
-        //@include adaptiveValue("font-size", 19, 16);
-      /*  span{
-          display: inline-block;
-          @include adaptiveValue("font-size", 16, 15);
-        }*/
+      @include adaptiveValue("width", 365, 200, 1480, 1170, 1);
+      @media (max-width: em(892)) {
+        position: relative;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 100%;
+        max-width: rem(484);
+        column-gap: rem(5);
+        margin-top: rem(-3);
+        @include adaptiveValue("font-size", 19, 18);
+        letter-spacing: rem(0.8);
       }
+
+      p {
+        @media (max-width: em(892)) {
+          //white-space: nowrap;
+          @include adaptiveValue("font-size", 19, 16);
+        }
+
+        /*  span{
+            display: inline-block;
+            @include adaptiveValue("font-size", 16, 15);
+          }*/
+      }
+
+      &--enterprise {
+        @include adaptiveValue("width", 365, 120, 1480, 991, 1);
+        @media (max-width: em(892)) {
+          display: flex;
+          column-gap: rem(5);
+          margin-top: rem(-3);
+          width: 100%;
+          max-width: rem(484);
+        }
+      }
+
+      &--short {
+        @include adaptiveValue("width", 340, 190, 1480, 991, 1);
+        max-width: rem(340);
+      }
+
       &--down {
+        @include adaptiveValue("width", 365, 110, 1480, 1100, 1);
         top: rem(90);
+        @media (max-width: em(892)) {
+          display: flex;
+          align-items: center;
+          column-gap: rem(5);
+          top: auto;
+          margin-top: rem(-3);
+          width: 100%;
+          max-width: rem(484);
+        }
+      }
+
+      &--down-jur {
+        @include adaptiveValue("width", 365, 170, 1480, 1100, 1);
+        top: rem(90);
+        @media (max-width: em(892)) {
+          display: flex;
+          align-items: center;
+          column-gap: rem(5);
+          top: auto;
+          margin-top: rem(-3);
+          width: 100%;
+          max-width: rem(484);
+        }
+      }
+
+      &--down-uix {
+        top: rem(90);
+        @include adaptiveValue("width", 365, 165, 1480, 991, 1);
+        @media (max-width: em(892)) {
+          display: flex;
+          column-gap: rem(5);
+          top: 0;
+          margin-top: rem(-3);
+          width: 100%;
+          max-width: rem(484);
+        }
       }
     }
   }
@@ -159,5 +361,11 @@
   display: flex;
   align-items: center;
   column-gap: rem(90);
+  @include adaptiveValue("column-gap", 90, 10);
+  @media (max-width: em(892)) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
 }
 

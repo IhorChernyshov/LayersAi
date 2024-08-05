@@ -3,7 +3,10 @@
 
 .team {
   background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
-  padding-bottom: rem(250);
+  @include adaptiveValue("padding-bottom", 220, 90);
+  @media (max-width: em(1070)) {
+    padding-bottom: rem(180);
+  }
   // .team__container
   &__container {
   }
@@ -20,8 +23,9 @@
   &__title-component {
     display: flex;
     justify-content: center;
-    padding-top: rem(60);
-    padding-bottom: rem(160);
+
+    @include adaptiveValue("padding-top", 50, 40);
+    @include adaptiveValue("padding-bottom", 50, 40);
   }
 
   // .team__item-one-component

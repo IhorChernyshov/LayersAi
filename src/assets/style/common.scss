@@ -1,9 +1,9 @@
 @import "../../assets/style/style";
 
-.header-item{
+.header-item {
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif ;
+  font-family: 'Inter', sans-serif;
   font-weight: 300;
   color: #D1CBCB;
   font-size: rem(21);
@@ -14,19 +14,32 @@
       color: #fff;
     }
   }
+  @media (max-width: $tablet) {
+    @include adaptiveValue("font-size", 27, 27, 1200, 991.98, 1);
+    color: #fff;
+    font-weight: 500;
+  }
 }
 
-.anim{
+.header-link {
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: rem(20) 0;
+  }
+}
+
+.anim {
   transform: scale(0);
-  &.loaded{
+
+  &.loaded {
     transform: scale(1);
     transition: transform 1s ease 0s;
   }
 }
 
 
-.chip-title{
-  font-family: 'Inter', sans-serif ;
+.chip-title {
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   //text-transform: uppercase;
   color: #fff;
@@ -34,8 +47,8 @@
   @include adaptiveValue("font-size", 21, 17, 1200, 991.98, 1);
 }
 
-.chip-text{
-  font-family: 'Open Sans', sans-serif ;
+.chip-text {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: rem(19);
@@ -44,32 +57,34 @@
 }
 
 
-.title{
-  font-family: 'Oswald', sans-serif ;
+.title {
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
   font-size: rem(65);
   @include adaptiveValue("font-size", 65, 35, 1200, 320.98, 1);
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-/*  background-image: url(../../assets/images/hero-title.jpg);
-  background-size: 200%;
-  background-repeat: repeat;
-  animation: bg-animation 10s infinite alternate;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;*/
+  /*  background-image: url(../../assets/images/hero-title.jpg);
+    background-size: 200%;
+    background-repeat: repeat;
+    animation: bg-animation 10s infinite alternate;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;*/
 
-  &--hero{
+  &--hero {
     font-size: rem(80);
     @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
-    &.loaded{
+
+    &.loaded {
       font-size: rem(180);
       @include adaptiveValue("font-size", 180, 40, 1200, 320.98, 1);
     }
-    &.load{
+
+    &.load {
       transition: all 1s ease 0s;
       font-size: rem(180);
       @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
@@ -78,38 +93,41 @@
   }
 
 
-  &--hero-3{
+  &--hero-3 {
     font-size: rem(80);
     @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
-    &.loaded{
+
+    &.loaded {
       font-size: rem(180);
       @include adaptiveValue("font-size", 180, 40, 1200, 320.98, 1);
     }
-    &.load{
+
+    &.load {
       transition: all 1s ease 0s;
       font-size: rem(80);
       @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
     }
   }
 
-  &--product{
+  &--product {
     font-size: rem(45);
     @include adaptiveValue("font-size", 45, 21, 1200, 320.98, 1);
-  }
- &--features{
-    font-size: rem(45);
-    @include adaptiveValue("font-size", 45, 21, 1200, 320.98, 1);
-   letter-spacing: rem(2);
   }
 
-  &--card{
+  &--features {
+    font-size: rem(45);
+    @include adaptiveValue("font-size", 45, 21, 1200, 320.98, 1);
+    letter-spacing: rem(2);
+  }
+
+  &--card {
     font-size: rem(34);
     @include adaptiveValue("font-size", 34, 18, 1200, 320.98, 1);
     letter-spacing: rem(1.2);
     @include adaptiveValue("margin-bottom", 85, 30);
   }
 
-  &--aus{
+  &--aus {
     font-weight: 500;
     @include adaptiveValue("font-size", 32, 20);
     letter-spacing: rem(1.6);
@@ -117,8 +135,8 @@
   }
 }
 
-.subtitle{
-  font-family: 'Unbounded', sans-serif ;
+.subtitle {
+  font-family: 'Unbounded', sans-serif;
   font-weight: 200;
   color: #6B6A6A;
   font-size: rem(19);
@@ -126,24 +144,31 @@
   padding: rem(15) 0;
 }
 
-.text{
-  font-family: 'Unbounded', sans-serif ;
+.text {
+  font-family: 'Unbounded', sans-serif;
   font-weight: 300;
   color: #E7E1E1;
-  @include adaptiveValue("font-size", 19, 16, 1200, 767.98, 1);
+  @include adaptiveValue("font-size", 19, 14);
   line-height: 155%;
   max-width: rem(555);
+  @media (max-width: em(1070)) {
+    line-height: 220%;
+  }
+  @media (max-width: em(600)) {
+    line-height: 162%;
+  }
 }
 
 
-.prod-title{
-  font-family: 'Oswald', sans-serif ;
+.prod-title {
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
   color: #fff;
   font-size: rem(38);
   @include adaptiveValue("font-size", 38, 20, 1200, 320.98, 1);
   letter-spacing: rem(0);
-  span{
+
+  span {
     display: inline-block;
     background-image: url(../../assets/images/blue-txt-bg.jpg);
     //background-position: 263% 185%;
@@ -153,14 +178,14 @@
     color: transparent;
   }
 
-  &--package{
+  &--package {
     font-weight: 700;
     font-size: rem(45);
     @include adaptiveValue("font-size", 45, 21, 1200, 320.98, 1);
   }
 
-  &--roadmap{
-    font-family: 'Roboto', sans-serif ;
+  &--roadmap {
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     text-transform: none;
     font-size: rem(40);
@@ -177,25 +202,42 @@
 }
 
 
-.tech-title{
+.tech-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: rem(25);
-  @include adaptiveValue("font-size", 25, 19);
+  @include adaptiveValue("font-size", 25, 17);
 }
-.tech-text{
+
+.tech-text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: rem(18);
-  @include adaptiveValue("font-size", 18, 16);
+  @include adaptiveValue("font-size", 18, 15);
   color: #B4B4B4;
-  line-height: 122%;
+  line-height: 135%;
   max-width: rem(290);
-  &--vector{
-    max-width: rem(320);
+  @media (max-width: em(630)) {
+    max-width: 100%;
   }
-  &--rag{
+  &--vector {
+    max-width: rem(320);
+    @media (max-width: em(1318)) {
+      max-width: em(320);
+    }
+    @media (max-width: em(630)) {
+      max-width: 100%;
+    }
+  }
+
+  &--rag {
     max-width: rem(360);
+    @media (max-width: em(1318)) {
+      max-width: em(290);
+    }
+    @media (max-width: em(630)) {
+      max-width: 100%;
+    }
   }
 
 }

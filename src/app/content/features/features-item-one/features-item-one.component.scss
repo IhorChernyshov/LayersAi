@@ -17,18 +17,18 @@
   &__main-top {
     display: flex;
     flex-direction: column;
-    padding-top: rem(50);
+    @include adaptiveValue("padding-top", 50, 25);
     @include adaptiveValue("margin-bottom", 35, 20);
   }
 
-  // .features-one__subtitle
-  &__subtitle {
+  &__title-box{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: rem(5);
+    margin-left: rem(-20);
     position: relative;
-    @include adaptiveValue("margin-bottom", 55, 40);
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    @include adaptiveValue("font-size", 35, 21);
-    line-height: rem(13);
     span{
       background-image: url(../../../../assets/images/blue-txt-bg.jpg);
       background-position: center;
@@ -36,22 +36,30 @@
       background-clip: text;
       color: transparent;
     }
-
     &::after {
       content: '';
       position: absolute;
       width: 100%;
-      max-width: rem(300);
+      @include adaptiveValue("max-width", 295, 170);
       height: rem(2);
-      @include adaptiveValue("bottom", -30, -20);
-      left: 0;
+      @include adaptiveValue("bottom", -30, -15);
+      left: rem(30);
       background: url(../../../../assets/images/blue-txt-bg.jpg) 0 0 / cover no-repeat;
       background-size: 160%;
     }
   }
 
+  // .features-one__subtitle
+  &__subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 35, 21);
+    line-height: rem(13);
+  }
+
   // .features-one__list
   &__list {
+    @include adaptiveValue("padding-top", 55, 30);
   }
 
   // .features-one__item
@@ -59,28 +67,29 @@
     display: flex;
     align-items: start;
     column-gap: rem(10);
-    position: relative;
   }
 
   &__icon {
-    position: absolute;
-    top: 0%;
-    left: -5%;
-
-    width: rem(25);
-    height: rem(25);
+    @include adaptiveValue("width", 25, 18);
+    @include adaptiveValue("height", 25, 18);
   }
 
   // .features-one__text
   &__text {
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-    @include adaptiveValue("font-size", 19, 17);
+    @include adaptiveValue("font-size", 19, 15);
     color: #8b8b8b;
     max-width: rem(635);
     line-height: rem(33);
     span {
       color: #fff;
+    }
+    @media (max-width: em(1380)) {
+      max-width: rem(500);
+    }
+    @media (max-width: em(740)) {
+      line-height: 175%;
     }
   }
 }

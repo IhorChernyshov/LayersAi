@@ -70,11 +70,17 @@
 
   // .pack__link
   &__link {
-    font-size: rem(17);
+    @include adaptiveValue("font-size", 17, 15);
     width: 100%;
     border: rem(1) solid #fffdf2;
     padding: rem(15) rem(20);
     border-radius: rem(25);
     margin-bottom: rem(10);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(44, 43, 43, 0.3);
+      }
+    }
   }
 }

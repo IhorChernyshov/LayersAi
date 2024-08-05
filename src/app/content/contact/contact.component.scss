@@ -22,12 +22,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: rem(40);
+    gap: rem(40);
     padding: rem(130) 0;
+    @media (max-width: em(1052)) {
+      flex-direction: column;
+    }
+    @media (max-width: em(788.98)) {
+      @include adaptiveValue("padding-top", 60, 35);
+      @include adaptiveValue("padding-bottom", 60, 10);
+    }
   }
 
   // .contact__item-one-component
   &__item-one-component {
+    margin-bottom: rem(50);
+  }
+
+  &__item-together {
+    @media (max-width: em(1052)) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   // .contact__item-two-component
@@ -41,5 +58,18 @@
     justify-content: space-between;
     align-items: flex-start;
     height: rem(340);
+    @media (max-width: em(788.98)) {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+}
+
+app-contact-item-three{
+  @media (max-width: em(788.98)) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 }

@@ -4,6 +4,9 @@
 .box-images {
   // .box-images__one
   &__one {
+    @media (max-width: em(1070)) {
+      @include adaptiveValue("width", 254, 120);
+    }
     animation: rotate 30s infinite linear;
   }
 }

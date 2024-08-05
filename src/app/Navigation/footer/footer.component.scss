@@ -46,10 +46,23 @@
   }
 }*/
 .footer {
+  position: relative;
   color: #fff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   background: #070707;
   @include adaptiveValue("padding-top", 62, 40, 767.98, 479.98, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: rem(1);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+background-color: #fff;
+  }
+
   // .footer__body
   &__body {
     margin-bottom: rem(100);
@@ -123,7 +136,7 @@
   &__copy {
     text-align: center;
     color: #fff;
-    background-color: #4475F2;
+    background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
     padding: 50px;
   }
 }

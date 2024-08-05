@@ -8,7 +8,7 @@
 
   // .roadmap-tablet__body
   &__body {
-    max-width: rem(200);
+    @include adaptiveValue("max-width", 200, 140);
   }
 
   // .roadmap-tablet__list
@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     column-gap: rem(10);
+
     &::after {
       content: '';
       position: absolute;
@@ -41,31 +42,30 @@
     display: inline-block;
     border-radius: 50%;
     background-color: #2D99FF;
-    width: rem(25);
-    height: rem(25);
+    @include adaptiveValue("width", 25, 19);
+    @include adaptiveValue("height", 25, 19);
     box-shadow: 0 0 rem(15) rgba(76, 121, 158, 1);
   }
 
-// .roadmap-tablet__half-circle
+  // .roadmap-tablet__half-circle
   &__half-circle {
     display: inline-block;
     border-radius: 50%;
     /*5487D3*/
     border: rem(5) solid #2D99FF;
-    width: rem(25);
-    height: rem(25);
+    @include adaptiveValue("width", 25, 19);
+    @include adaptiveValue("height", 25, 19);
     box-shadow: 0 0 rem(7) rgba(76, 121, 158, 1);
   }
 
-// .roadmap-tablet__circle
+  // .roadmap-tablet__circle
   &__empty-circle {
     display: inline-block;
     border-radius: 50%;
     /*4872B0*/
     border: rem(2) solid #2D99FF;
-    width: rem(25);
-    height: rem(25);
-    //box-shadow: 0 0 rem(15) rgba(76, 121, 158, 1);
+    @include adaptiveValue("width", 25, 19);
+    @include adaptiveValue("height", 25, 19);
   }
 
   // .roadmap-tablet__line
@@ -82,14 +82,18 @@
   &__tablet-content {
     border: rem(1) solid #2D99FF;
     background: #0B0B0B;
-    padding: rem(20) rem(20) rem(25) ;
+    padding: rem(20) rem(20) rem(25);
     border-radius: rem(25);
+    @include adaptiveValue("padding-top", 20, 9);
+    @include adaptiveValue("padding-bottom", 20, 20);
+    @include adaptiveValue("padding-right", 25, 9);
+    @include adaptiveValue("padding-left", 25, 9);
   }
 }
 
-.bold-font{
+.bold-font {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
-  @include adaptiveValue("font-size", 17, 16);
+  @include adaptiveValue("font-size", 17, 14);
   letter-spacing: rem(0.8);
 }

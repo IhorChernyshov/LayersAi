@@ -7,12 +7,12 @@
     <div class="timeline__item timeline__item--active">
       <div class="timeline__circle"></div>
       <div class="timeline__line"></div>
-      <div class="timeline__text">Lexfactum<br><p>enterprise (MVP)</p></div>
+      <div class="timeline__text timeline__text--enterprise">Lexfactum<br>enterprise (MVP)</div>
     </div>
     <div class="timeline__item">
       <div class="timeline__circle"></div>
-      <div class="timeline__line timeline__line--down"></div>
-      <div class="timeline__text timeline__text--down">UIX upgrade: <br> <p>Upload Documents Form cases</p></div>
+      <div class="timeline__line timeline__line--down-one"></div>
+      <div class="timeline__text timeline__text--down-uix">UIX upgrade: <br>Upload Documents Form cases</div>
     </div>
     <div class="timeline__item timeline__item--active">
       <div class="timeline__half-circle"></div>
@@ -23,18 +23,27 @@
   <div class="timeline__list-two list">
     <div class="timeline__item">
       <div class="timeline__empty-circle"></div>
-      <div class="timeline__line timeline__line--down"></div>
-      <div class="timeline__text timeline__text--down"><p>Integration of AKOMA</p><p>NTOSO XML</p></div>
+      <div class="timeline__line timeline__line--down-two"></div>
+      @if (document.documentElement.offsetWidth > 892){
+        <div class="timeline__text timeline__text--down">Integration of <br> AKOMA NTOSO XML</div>
+      }@else{
+        <div class="timeline__text timeline__text--down">Integration of <br><p>AKOMA NTOSO XML</p></div>
+    }
+
     </div>
     <div class="timeline__item">
-      <div class="timeline__empty-circle"></div>
+      <div class="timeline__empty-circle" style="width: 23px; height: 22px;"></div>
       <div class="timeline__line"></div>
-      <div class="timeline__text"><p>Adoption of European and African laws</p><p>(akoma ntoso compliant)</p></div>
+      <div class="timeline__text timeline__text--short">Adoption of European and African laws(akoma ntoso compliant)</div>
     </div>
     <div class="timeline__item">
       <div class="timeline__empty-circle"></div>
-      <div class="timeline__line timeline__line--down"></div>
-      <div class="timeline__text timeline__text--down"><p>Further adoption of</p><p>other jurisdictions</p></div>
+      <div class="timeline__line timeline__line--down-three"></div>
+      @if (document.documentElement.offsetWidth > 892){
+      <div class="timeline__text timeline__text--down-jur">Further adoption of other jurisdictions</div>
+      }@else{
+        <div class="timeline__text timeline__text--down-jur"><p>Further adoption of</p><p>other jurisdictions</p></div>
+      }
     </div>
   </div>
 

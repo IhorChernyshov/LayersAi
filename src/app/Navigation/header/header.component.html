@@ -1,51 +1,59 @@
-<header class="header">
+<header class="header" appScrollDirection>
   <div class="header__container" [class.loaded]="isLoading">
-<div class="header__body">
-    <div class="header__left-items items-left anim" [class.loaded]="isLoading">
-      <nav class="items-left__menu-left menu-left">
-        <ul class="menu-left__list">
-          <li class="menu-left__item header-item">
-            <a href="#" class="menu-left__link">Home</a>
-          </li>
-          <li class="menu-left__item header-item">
-            <a href="#" class="menu-left__link">Product</a>
-          </li>
-          <li class="menu-left__item header-item">
-            <a href="#" class="menu-left__link">Features</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <div class="header__body">
+      <div  class="header__left-items items-left anim" [class.loaded]="isLoading">
+        <nav class="items-left__menu-left menu-left">
+          <ul class="menu-left__list">
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
+              <a href="#" class="menu-left__link header-link"   appClickSmooth="home">Home</a>
+            </li>
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
+              <a href="#" class="menu-left__link header-link"   appClickSmooth="product">Product</a>
+            </li>
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
+              <a href="#" class="menu-left__link header-link"  appClickSmooth="features">Features</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-   <div class="header__logo-item logo">
-      <nav class="logo__menu menu-logo">
-        <ul class="menu-logo__list">
-          <li class="menu-logo__item">
-            <a href="#" class="menu-logo__logo" [class.loaded]="isLoading">Lexfactum.AI</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <div  class="header__logo-item logo">
+        <nav class="logo__menu menu-logo">
+          <ul class="menu-logo__list">
+            <li class="menu-logo__item">
+              <a href="#" class="menu-logo__logo" [class.loaded]="isLoading">Lexfactum.AI</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-   <div class="header__right-items items-right">
-      <nav class="items-right__menu-right menu-right anim" [class.loaded]="isLoading">
-        <ul class="menu-right__list">
-          <li class="menu-right__item header-item">
-            <a href="#" class="menu-right__link">Rodemap</a>
-          </li>
-          <li class="menu-right__item header-item">
-            <a href="#" class="menu-right__link">Team</a>
-          </li>
-          <li class="menu-right__item header-item">
-            <div class="menu-right__btn-body">
-            <button class="menu-right__btn">
-              <a href="#" class="menu-right__link">Contact</a>
-            </button>
-            </div>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__right-items items-right">
+        <nav class="items-right__menu-right menu-right anim" [class.loaded]="isLoading">
+          <ul  class="menu-right__list">
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-right__item header-item">
+              <a href="#" class="menu-right__link header-link" appClickSmooth="roadmap">Roadmap</a>
+            </li>
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-right__item header-item">
+              <a href="#" class="menu-right__link header-link" appClickSmooth="team">Team</a>
+            </li>
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-right__item header-item">
+              <div class="menu-right__btn-body">
+                <button class="menu-right__btn">
+                  <a href="#" class="menu-right__link" appClickSmooth="contact">Contact</a>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__menu menu">
+        <button type="button" class="menu__icon icon-menu" [class.menu-open]="isMenuOpen ? isMenuOpen() : ''" (click)="toggleMenu()"><span></span></button>
+        <nav class="menu__body" [class.menu-open]="isMenuOpen ? isMenuOpen() : ''">
+          <ul class="menu__list" [class.menu-open]="isMenuOpen ? isMenuOpen() : ''">
+<!--            <li class="menu__item"><a href="" class="menu__link"></a></li>-->
+          </ul>
+        </nav>
+      </div>
     </div>
-</div>
   </div>
 </header>

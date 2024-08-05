@@ -10,7 +10,7 @@
   &__body {
     position: relative;
     z-index: 9;
-    padding: rem(50);
+    padding: rem(50) rem(0);
     &::after {
       content: '';
       position: absolute;

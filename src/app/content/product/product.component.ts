@@ -6,19 +6,21 @@ import {ProductTitleComponent} from "./product-title/product-title.component";
 import {ProductBgDesignComponent} from "./product-bg-design/product-bg-design.component";
 import {ProductDesignTextComponent} from "./product-design-text/product-design-text.component";
 import {ProductLogoComponent} from "./product-logo/product-logo.component";
+import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
 
 @Component({
   selector: 'app-product',
   standalone: true,
-    imports: [
-        ProductHeaderComponent,
-        ProductTextComponent,
-        ProductInputComponent,
-        ProductTitleComponent,
-        ProductBgDesignComponent,
-        ProductDesignTextComponent,
-        ProductLogoComponent
-    ],
+  imports: [
+    ProductHeaderComponent,
+    ProductTextComponent,
+    ProductInputComponent,
+    ProductTitleComponent,
+    ProductBgDesignComponent,
+    ProductDesignTextComponent,
+    ProductLogoComponent,
+    DynamicAdaptDirective
+  ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

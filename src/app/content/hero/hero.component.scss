@@ -9,7 +9,6 @@
   //grid-template-columns: 15px 1fr minmax(auto, 1570px) 1fr 15px;
   background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
   padding-bottom: rem(200);
-
   // .hero__components
   &__components {
     display: flex;
@@ -70,7 +69,7 @@
     }
     &.load{
       opacity: 1;
-      transition: all 1s ease 0.3s;
+      transition: all 1s ease 0.5s;
     }
   }
 
@@ -90,7 +89,6 @@
     }
     &.load{
       opacity: 1;
-      //visibility: visible;
       transition: all 0.5s ease 0.4s;
     }
   }
@@ -157,6 +155,12 @@
   position: absolute;
   bottom: 15%;
   right: 5%;
+}
 
-
+.comp{
+  transition: all 0.3s ease 0s;
+  &.menu-open{
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s ease 0s;
+  }
 }

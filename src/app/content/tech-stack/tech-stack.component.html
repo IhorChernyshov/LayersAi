@@ -1,18 +1,16 @@
-
-
-<div class="tech">
-<app-tech-stack-header></app-tech-stack-header>
+<div class="tech" id="tech-stack">
+  <app-tech-stack-header></app-tech-stack-header>
   <div class="tech__container">
     <div class="tech__body">
 
       <ul class="tech__components" [class.loaded]="isLoading">
         <ul class="tech__together">
-        <li class="tech___items-component item" [class.loaded]="isLoading">
-          <app-tech-stack-items></app-tech-stack-items>
-        </li>
-        <li class="tech___image-component item" [class.loaded]="isLoading">
-          <app-tech-stack-image></app-tech-stack-image>
-        </li>
+          <li class="tech___items-component item" [class.loaded]="isLoading">
+            <app-tech-stack-items></app-tech-stack-items>
+          </li>
+          <li class="tech___image-component item" [class.loaded]="isLoading">
+            <app-tech-stack-image></app-tech-stack-image>
+          </li>
         </ul>
       </ul>
 

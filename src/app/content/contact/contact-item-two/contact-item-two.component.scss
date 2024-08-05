@@ -54,6 +54,12 @@
     letter-spacing: rem(0.8);
     border: rem(1) solid #fff;
     padding: rem(20) rem(50);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 }
 

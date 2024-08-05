@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {ClickSmoothDirective} from "../../../directives/click-smooth.directive";
 
 @Component({
   selector: 'app-team-header',
   standalone: true,
-  imports: [],
+  imports: [
+    ClickSmoothDirective
+  ],
   templateUrl: './team-header.component.html',
   styleUrl: './team-header.component.scss'
 })

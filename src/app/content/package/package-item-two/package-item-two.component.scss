@@ -56,6 +56,9 @@
     text-transform: none;
     padding: rem(5) rem(10);
     border-radius: rem(25);
+    @media (max-width: em(664.98)) {
+      left: 72%;
+    }
   }
 
 
@@ -102,5 +105,11 @@
     padding: rem(15) rem(20);
     border-radius: rem(25);
     margin-bottom: rem(10);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #ffffff30;
+      }
+    }
   }
 }

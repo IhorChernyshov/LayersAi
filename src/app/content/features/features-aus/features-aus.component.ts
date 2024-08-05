@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class FeaturesAusComponent {
 
+    protected readonly document = document;
 }

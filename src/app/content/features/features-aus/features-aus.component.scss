@@ -18,6 +18,16 @@
   &__title {
   }
 
+  &__image{
+    img{
+      aspect-ratio: 650/184;
+      max-width: rem(650);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   // .features-aus__tablet
   &__tablet {
     display: grid;
@@ -58,6 +68,10 @@
   max-width: rem(77);
 max-height: rem(70);
   grid-area: item-2;
+  @include adaptiveValue("padding-top", 24, 10);
+  @include adaptiveValue("padding-bottom", 24, 10);
+  @include adaptiveValue("padding-right", 20, 8);
+  @include adaptiveValue("padding-left", 20, 8);
 }
 
 .item-3 {
@@ -65,57 +79,74 @@ max-height: rem(70);
   max-width: rem(77);
   max-height: rem(70);
   grid-area: item-3;
+  @include adaptiveValue("padding-top", 24, 10);
+  @include adaptiveValue("padding-bottom", 24, 10);
+  @include adaptiveValue("padding-right", 20, 8);
+  @include adaptiveValue("padding-left", 20, 8);
 }
 
 .item-4 {
   padding: rem(24) rem(20);
-
   grid-area: item-4;
+  @include adaptiveValue("padding-top", 24, 10);
+  @include adaptiveValue("padding-bottom", 24, 10);
+  @include adaptiveValue("padding-right", 20, 8);
+  @include adaptiveValue("padding-left", 20, 8);
 }
 
 .item-5 {
   padding: rem(24) rem(20);
-
   grid-area: item-5;
+  @include adaptiveValue("padding-top", 24, 10);
+  @include adaptiveValue("padding-bottom", 24, 10);
+  @include adaptiveValue("padding-right", 20, 8);
+  @include adaptiveValue("padding-left", 20, 8);
 }
 
 .item-6 {
   font-size: rem(19);
+   @include adaptiveValue("font-size", 19, 17);
   font-weight: 600;
   grid-area: item-6;
   display: flex;
     justify-content: flex-start;
     align-items: center;
   width: 218px;
+  @include adaptiveValue("width", 218, 120);
   padding-left: 17px;
 }
 
 .item-7 {
   font-size: rem(19);
+   @include adaptiveValue("font-size", 19, 17);
   font-weight: 600;
   grid-area: item-7;
   display: flex;
     justify-content: flex-start;
     align-items: center;
   width: 218px;
+  @include adaptiveValue("width", 218, 120);
   padding-left: 17px;
 }
 
 .item-8 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
-  padding: rem(20) rem(20);
+  padding: rem(20) ;
   justify-items: center;
   align-self: center;
   grid-area: item-8;
   max-width: rem(77);
   max-height: rem(70);
+  @include adaptiveValue("padding", 20, 10);
 }
 
 .item-9 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(20);
   justify-items: center;
@@ -123,31 +154,43 @@ max-height: rem(70);
   grid-area: item-9;
   max-width: rem(77);
   max-height: rem(70);
+  @include adaptiveValue("padding", 20, 10);
 }
 
 .item-10 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(50);
   justify-items: center;
   align-self: center;
   grid-area: item-10;
+  @include adaptiveValue("padding-top", 20, 10);
+  @include adaptiveValue("padding-bottom", 20, 10);
+  @include adaptiveValue("padding-right", 50, 10);
+  @include adaptiveValue("padding-left", 50, 10);
 }
 
 .item-11 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(50);
   justify-items: center;
   align-self: center;
   grid-area: item-11;
+  @include adaptiveValue("padding-top", 20, 10);
+  @include adaptiveValue("padding-bottom", 20, 10);
+  @include adaptiveValue("padding-right", 50, 10);
+  @include adaptiveValue("padding-left", 50, 10);
 }
 
 .item-12 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(20);
   justify-items: center;
@@ -155,11 +198,13 @@ max-height: rem(70);
   grid-area: item-12;
   max-width: rem(77);
   max-height: rem(70);
+  @include adaptiveValue("padding", 20, 10);
 }
 
 .item-13 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+  @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(20);
   justify-items: center;
@@ -167,24 +212,35 @@ max-height: rem(70);
   grid-area: item-13;
   max-width: rem(77);
   max-height: rem(70);
+  @include adaptiveValue("padding", 20, 10);
 }
 
 .item-14 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(50);
   justify-items: center;
   align-self: center;
   grid-area: item-14;
+  @include adaptiveValue("padding-top", 20, 10);
+  @include adaptiveValue("padding-bottom", 20, 10);
+  @include adaptiveValue("padding-right", 50, 10);
+  @include adaptiveValue("padding-left", 50, 10);
 }
 
 .item-15 {
   font-family: 'Open Sans', sans-serif;
   font-size: rem(18);
+   @include adaptiveValue("font-size", 18, 15);
   font-weight: 400;
   padding: rem(20) rem(50);
   justify-items: center;
   align-self: center;
   grid-area: item-15;
+  @include adaptiveValue("padding-top", 20, 10);
+  @include adaptiveValue("padding-bottom", 20, 10);
+  @include adaptiveValue("padding-right", 50, 10);
+  @include adaptiveValue("padding-left", 50, 10);
 }

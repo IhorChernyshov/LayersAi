@@ -3,6 +3,7 @@ import {ContactHeaderComponent} from "./contact-header/contact-header.component"
 import {ContactItemOneComponent} from "./contact-item-one/contact-item-one.component";
 import {ContactItemTwoComponent} from "./contact-item-two/contact-item-two.component";
 import {ContactItemThreeComponent} from "./contact-item-three/contact-item-three.component";
+import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
 
 
 @Component({
@@ -12,7 +13,8 @@ import {ContactItemThreeComponent} from "./contact-item-three/contact-item-three
     ContactHeaderComponent,
     ContactItemOneComponent,
     ContactItemTwoComponent,
-    ContactItemThreeComponent
+    ContactItemThreeComponent,
+    DynamicAdaptDirective
 
   ],
   templateUrl: './contact.component.html',

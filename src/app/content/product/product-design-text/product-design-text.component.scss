@@ -27,6 +27,7 @@
     align-items: flex-end;
     white-space: nowrap;
     font-size: rem(17);
+    letter-spacing: rem(0.8);
     @include adaptiveValue("font-size", 17, 15, 1200, 767.98, 1);
     background-image: url(../../../../assets/images/hero-title2.jpg);
     background-size: 200%;

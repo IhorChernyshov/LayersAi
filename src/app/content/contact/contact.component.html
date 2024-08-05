@@ -1,5 +1,5 @@
 <app-contact-header></app-contact-header>
-<div class="contact">
+<div class="contact" id="contact">
   <div class="contact__container">
     <div class="contact__content">
       <ul class="contact__components">
@@ -7,12 +7,14 @@
           <li class="contact__item-one-component">
             <app-contact-item-one></app-contact-item-one>
           </li>
-          <li class="contact__item-two-component">
+          <li appDynamicAdapt=".contact__item-together, 1052" class="contact__item-two-component">
             <app-contact-item-two></app-contact-item-two>
           </li>
-          <li class="contact__item-three-component">
+          <li appDynamicAdapt=".contact__item-together, 1052; .contact__components, 788.98" class="contact__item-three-component">
             <app-contact-item-three></app-contact-item-three>
           </li>
+          <ul class="contact__item-together">
+          </ul>
         </ul>
       </ul>
     </div>

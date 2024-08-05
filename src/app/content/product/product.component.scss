@@ -5,6 +5,9 @@
 .product {
   background: #070707;
   @include adaptiveValue("padding-bottom", 220, 90);
+  @media (max-width: em(1070)) {
+    padding-bottom: rem(220);
+  }
   // .product__contain
   &__contain {
   }
@@ -43,19 +46,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: rem(50);
+    @include adaptiveValue("padding-top", 50, 40);
   }
 
-  // .product__grid
-  &__grid {
+  // .product__flex
+  &__flex {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
     padding-top: rem(165);
-    @include adaptiveValue("padding-top", 165, 40, 1200, 320);
     margin-bottom: rem(105);
-    @include adaptiveValue("padding-top", 105, 50, 1200, 320);
-
+    @include adaptiveValue("padding-top", 105, 40, 1200, 320);
+    @media (max-width: em(1070)) {
+      justify-content: center;
+      //flex-wrap: wrap;
+      row-gap: rem(100);
+      @include adaptiveValue("row-gap", 100, 40);
+      column-gap: rem(30);
+      flex-direction: column-reverse;
+     @include adaptiveValue("margin-bottom", 50, 25);
+    }
+    @media (max-width: em(660)) {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &__together {
@@ -63,15 +77,28 @@
     flex-direction: column;
     justify-content: space-around;
     row-gap: rem(100);
+    @media (max-width: em(1070)) {
+      column-gap: rem(30);
+      flex-direction: row;
+      justify-content: space-between;
+      //align-items: center;
+    }
   }
 
   // .product__text-component
   &__text-component {
     padding-top: rem(50);
+    @media (max-width: em(1070)) {
+      padding-top: 0;
+    }
   }
 
   // .product__input-component
   &__input-component {
+    @media (max-width: em(1070)) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   // .product__bg-design-component

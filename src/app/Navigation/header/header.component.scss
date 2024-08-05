@@ -16,7 +16,6 @@
     max-width: 1710px;
     padding: rem(30) rem(15) rem(15);
     position: relative;
-
     &::after {
       content: '';
       position: absolute;
@@ -84,6 +83,8 @@
     color: transparent;
     transform: translateY(110%);
     opacity: 0.3;
+    position: relative;
+    z-index: 51;
 
     &.loaded {
       opacity: 1;
@@ -116,7 +117,7 @@
     width: 100%;
     height: 100%;
     border-radius: rem(10);
-    padding: rem(10) rem(15);
+    //padding: rem(10) rem(15);
     &::after {
       content: '';
       position: absolute;
@@ -130,6 +131,10 @@
       animation: bg-animation 5s infinite alternate;
       background-clip: border-box;
       z-index: -1;
+      @media (max-width: $tablet) {
+        top: -3%;
+        left: -1%;
+      }
     }
 transition: all 0.5s ease 0s;
     @media (any-hover: hover) {
@@ -138,7 +143,12 @@ transition: all 0.5s ease 0s;
       }
     }
     a {
+      padding: rem(10) rem(15);
+      font-weight: 500;
       color: #fff;
+      @media (max-width: $tablet) {
+        padding: rem(15) rem(20);
+      }
     }
   }
 
@@ -158,5 +168,165 @@ transition: all 0.5s ease 0s;
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+//====================================================================================================
+
+.header {
+  // .header__menu
+  &__menu {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+  }
+
+  &__left-items{
+    display: none;
+    @media (min-width: $tablet) {
+      display: flex;
+      //flex-direction: row-reverse;
+    }
+  }
+   &__left-items{
+     display: none;
+    @media (min-width: $tablet) {
+      display: flex;
+      //flex-direction: row-reverse;
+    }
+  }
+
+}
+
+.menu {
+  // .menu__icon
+  &__icon {
+  }
+
+  // .menu__body
+  &__body {
+      display: none;
+    @media (max-width: $tablet) {
+      display: block;
+      position: fixed;
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+      pointer-events: none;
+      transition: all 0.3s ease 0s;
+      //background-color: #0c0c0c;
+      background-color: rgba(12, 12, 12, 0.8);
+      backdrop-filter: blur(10px);
+      @include adaptiveValue("padding-top", 170, 100);
+      padding-bottom: rem(30);
+      padding-right: rem(15);
+      padding-left: rem(15);
+
+      &::before {
+        content: "";
+        top: 0;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+        //@include adaptiveValue("height", 171, 100);
+        @include adaptiveValue("height", 300, 100);
+      }
+      &.menu-open {
+        pointer-events: visible;
+        top: 0;
+        opacity: 1;
+        z-index: 1;
+        &::before {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  // .menu__list
+  &__list {
+    &.menu-open{
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(30);
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  // .menu__item
+  &__item {
+  }
+
+  // .menu__link
+  &__link {
+  }
+}
+
+
+//Burger
+.icon-menu {
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    //height: rem(22.5);
+    height: rem(19.5);
+    cursor: pointer;
+    z-index: 5;
+    &.menu-open {
+      span,
+      &::before,
+      &::after {
+        background-color: #fff;
+      }
+    }
+  ;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      background-color: #fff;
+      border-radius: rem(25);
+
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - 1px);
+    }
+    &.menu-open {
+      span {
+        transform: scale(0);
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: calc(50% - 1px);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
   }
 }

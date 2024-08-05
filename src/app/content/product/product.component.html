@@ -1,4 +1,4 @@
-<div class="product">
+<div class="product" id="product">
   <app-product-header></app-product-header>
   <div class="product__contain">
     <div class="product__body">
@@ -8,16 +8,16 @@
           <li class="product__title-component item" [class.loaded]="isLoading">
             <app-product-title></app-product-title>
           </li>
-          <ul class="product__grid">
+          <ul class="product__flex">
             <ul class="product__together">
               <li class="product__text-component item" [class.loaded]="isLoading">
                 <app-product-text></app-product-text>
               </li>
-              <li class="product__input-component item" [class.loaded]="isLoading">
+              <li appDynamicAdapt=".product__flex, 1070" class="product__input-component item" [class.loaded]="isLoading">
                 <app-product-input></app-product-input>
               </li>
             </ul>
-            <li class="product__bg-design-component item" [class.loaded]="isLoading">
+            <li appDynamicAdapt=".product__together, 1070; .product__flex, 600; "  class="product__bg-design-component item" [class.loaded]="isLoading">
               <app-product-bg-design></app-product-bg-design>
             </li>
           </ul>
