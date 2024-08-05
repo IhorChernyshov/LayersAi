@@ -14,7 +14,7 @@ export class SmoothClickService {
     const targetElement = document.getElementById(targetElementId);
     if (targetElement) {
       const startingY = window.scrollY;
-      const targetY = targetElement.getBoundingClientRect().top + window.scrollY - 120;
+      const targetY = targetElement.getBoundingClientRect().top + window.scrollY;
       const distance = targetY - startingY;
       let startTime: number | null = null;
 
