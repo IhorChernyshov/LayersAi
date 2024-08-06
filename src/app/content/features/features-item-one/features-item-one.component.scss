@@ -45,7 +45,8 @@
       @include adaptiveValue("bottom", -30, -15);
       left: rem(30);
       background: url(../../../../assets/images/blue-txt-bg.jpg) 0 0 / cover no-repeat;
-      background-size: 160%;
+      //background-size: 160%;
+      background-size: 207%;
     }
   }
 

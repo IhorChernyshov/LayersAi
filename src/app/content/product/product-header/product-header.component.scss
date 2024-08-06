@@ -55,16 +55,16 @@
   &__btn {
     border: rem(1) solid #fff;
     border-radius: rem(25);
-    padding: rem(14) rem(25);
-    @include adaptiveValue("padding-top", 14, 10);
-    @include adaptiveValue("padding-bottom", 14, 10);
-    @include adaptiveValue("padding-right", 25, 15);
-    @include adaptiveValue("padding-left", 25, 15);
   }
 
   // .body-btn__link
   &__link {
     @include adaptiveValue("font-size", 16, 14);
+    padding: rem(14) rem(25);
+    @include adaptiveValue("padding-top", 14, 10);
+    @include adaptiveValue("padding-bottom", 14, 10);
+    @include adaptiveValue("padding-right", 25, 15);
+    @include adaptiveValue("padding-left", 25, 15);
   }
 
   // .body-btn__arrow

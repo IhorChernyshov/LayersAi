@@ -3,6 +3,7 @@
 
 
 .package {
+  position: relative;
   background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
   @include adaptiveValue("padding-bottom", 200, 80);
   // .package__container

@@ -65,8 +65,8 @@ background-color: #fff;
 
   // .footer__body
   &__body {
-    margin-bottom: rem(100);
-    @include adaptiveValue("margin-bottom", 70, 30, 1200, 320, 1);
+    //margin-bottom: rem(100);
+    //@include adaptiveValue("margin-bottom", 70, 30, 1200, 320, 1);
   }
 
   // .footer__container

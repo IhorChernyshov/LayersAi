@@ -2,6 +2,7 @@
 @import '../../../assets/style/common';
 
 .team {
+  position: relative;
   background: url(../../../assets/images/2.webp) 0 0 / cover no-repeat;
   @include adaptiveValue("padding-bottom", 220, 90);
   @media (max-width: em(1070)) {
