@@ -7,6 +7,7 @@ import {ProductBgDesignComponent} from "./product-bg-design/product-bg-design.co
 import {ProductDesignTextComponent} from "./product-design-text/product-design-text.component";
 import {ProductLogoComponent} from "./product-logo/product-logo.component";
 import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
+import {ScrollAnimateDirective} from "../../directives/scroll-animate.directive";
 
 @Component({
   selector: 'app-product',
@@ -19,7 +20,8 @@ import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
     ProductBgDesignComponent,
     ProductDesignTextComponent,
     ProductLogoComponent,
-    DynamicAdaptDirective
+    DynamicAdaptDirective,
+    ScrollAnimateDirective
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'

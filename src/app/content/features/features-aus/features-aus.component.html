@@ -1,6 +1,6 @@
 
 @if (document.documentElement.offsetWidth > 570){
-<div class="features-aus">
+<div class="features-aus opacity-element" appScrollAnimate [animationClass]="'opacity'" [animationDelay]="200" [threshold]="0.1">
   <div class="features-aus__container">
     <div class="features-aus__content">
       <div class="features-aus__body">
@@ -27,7 +27,7 @@
   </div>
 </div>
 } @else {
-  <div class="features-aus">
+  <div class="features-aus opacity-element" appScrollAnimate [animationClass]="'opacity'" [animationDelay]="200" [threshold]="0.5">
     <div class="features-aus__container">
       <div class="features-aus__content">
         <div class="features-aus__body">

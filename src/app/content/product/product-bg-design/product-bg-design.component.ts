@@ -1,9 +1,12 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
+import {ScrollAnimateDirective} from "../../../directives/scroll-animate.directive";
 
 @Component({
   selector: 'app-product-bg-design',
   standalone: true,
-  imports: [],
+    imports: [
+        ScrollAnimateDirective
+    ],
   templateUrl: './product-bg-design.component.html',
   styleUrl: './product-bg-design.component.scss'
 })

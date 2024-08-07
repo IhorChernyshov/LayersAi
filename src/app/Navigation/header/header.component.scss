@@ -10,7 +10,17 @@
   width: 100%;
   z-index: 150;
   transition: all 0.8s;
+  //transition: top 0.3s ease-in-out, padding 0.3s ease-in-out;
   //background-color: rgba(8, 8, 8, 0.6);
+  &--scroll{
+    //@media (max-width: $tablet) {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
+    backdrop-filter: blur(rem(10));
+    //border-radius: rem(25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    //}
+  }
   // .header__container
   &__container {
     max-width: 1710px;
@@ -38,6 +48,16 @@
       }
 
     }
+
+    &--scroll{
+      @media (max-width: $tablet) {
+        padding: rem(10) rem(10) rem(5);
+      }
+      &::after {
+            content: '';
+           display: none;
+          }
+ }
   }
 
   // .header__body
@@ -174,6 +194,7 @@ transition: all 0.5s ease 0s;
 //====================================================================================================
 
 .header {
+
   // .header__menu
   &__menu {
     @media (min-width: $tablet) {
@@ -201,6 +222,7 @@ transition: all 0.5s ease 0s;
 }
 
 .menu {
+  overflow: hidden;
   // .menu__icon
   &__icon {
   }
@@ -213,7 +235,7 @@ transition: all 0.5s ease 0s;
       position: fixed;
       overflow: auto;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       top: 0;
       left: 0;
       opacity: 0;

@@ -4,6 +4,7 @@ import {ContactItemOneComponent} from "./contact-item-one/contact-item-one.compo
 import {ContactItemTwoComponent} from "./contact-item-two/contact-item-two.component";
 import {ContactItemThreeComponent} from "./contact-item-three/contact-item-three.component";
 import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
+import {ScrollAnimateDirective} from "../../directives/scroll-animate.directive";
 
 
 @Component({
@@ -14,7 +15,8 @@ import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
     ContactItemOneComponent,
     ContactItemTwoComponent,
     ContactItemThreeComponent,
-    DynamicAdaptDirective
+    DynamicAdaptDirective,
+    ScrollAnimateDirective
 
   ],
   templateUrl: './contact.component.html',
@@ -22,4 +24,5 @@ import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
 })
 export class ContactComponent {
 
+    protected readonly document = document;
 }

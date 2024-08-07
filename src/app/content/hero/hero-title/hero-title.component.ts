@@ -22,6 +22,6 @@ export class HeroTitleComponent implements OnInit {
         this.isLoading = false;
         this.isLoaded = true;
       }
-    }, 1800);
+    }, 2050);
   }
 }

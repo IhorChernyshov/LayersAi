@@ -24,6 +24,7 @@ import {MenuStateService} from "../../services/menu-state.service";
 export class HeroComponent implements OnInit {
   @HostBinding('class.load') isLoading = false;
   @HostBinding('class.loaded') isLoaded = false;
+  @HostBinding('class.done') isDone = false;
   menuState = inject(MenuStateService)
   isMenuOpen: Signal<boolean> | undefined;
   constructor() {
@@ -39,6 +40,46 @@ export class HeroComponent implements OnInit {
         this.isLoading = false;
         this.isLoaded = true;
       }
-    }, 2600);
+    // }, 2900);
+    }, 3100);
+    setTimeout(() => {
+      this.isDone = true;
+    },3300)
   }
+
+ /* ngOnInit() {
+    const img = new Image();
+    img.src = '/assets/images/2.webp';
+    img.onload = () => {
+      setTimeout(() => {
+        this.isLoading = true;
+      }, 10);
+
+      setTimeout(() => {
+        if (this.isLoading) {
+          this.isLoading = false;
+          this.isLoaded = true;
+
+          setTimeout(() => {
+            const components = document.querySelectorAll('.hero__components, .chip__content');
+            components.forEach((component) => {
+              component.classList.add('loaded');
+            });
+
+            setTimeout(() => {
+              components.forEach((component) => {
+                component.classList.remove('loaded');
+                component.classList.add('load');
+              });
+            }, 1000); // Появление остальных элементов через 1 секунду после перемещения заголовка наверх
+          }, 1000); // Заголовок перемещается наверх через 1 секунду
+        }
+      }, 2600);
+    };
+
+    img.onerror = () => {
+      this.isLoading = false;
+      this.isLoaded = true;
+    };
+  }*/
 }

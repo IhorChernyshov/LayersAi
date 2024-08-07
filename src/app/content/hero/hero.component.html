@@ -1,4 +1,7 @@
 <div class="hero" id="home" >
+  <!--  <div class="hero__image">-->
+  <!--    <img src="/2.webp" alt="" class="hero__img">-->
+  <!--  </div>-->
   <div class="hero__container">
     <div class="hero__chip chip">
       <div class="chip__body" [class.menu-open]="isMenuOpen ? isMenuOpen() : ''">
@@ -11,7 +14,7 @@
         </div>
       </div>
     </div>
-    <ul class="hero__components comp" [class.loaded]="isLoading" [class.load]="isLoaded" [class.menu-open]="isMenuOpen ? isMenuOpen() : ''">
+    <ul class="hero__components comp" [class.loaded]="isLoading" [class.load]="isLoaded" [class.done]="isDone"  [class.menu-open]="isMenuOpen ? isMenuOpen() : ''">
       <li class="hero__title-component item" [class.loaded]="isLoading" [class.load]="isLoaded">
         <app-hero-title></app-hero-title>
       </li>

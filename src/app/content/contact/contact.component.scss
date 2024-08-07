@@ -4,7 +4,7 @@
 .contact {
 
   background: #070707;
-  @include adaptiveValue("padding-bottom", 220, 90);
+  @include adaptiveValue("padding-bottom", 120, 40);
   // .contact__container
   &__container {
   }
@@ -21,9 +21,9 @@
   // .contact__list
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: rem(40);
+    //gap: rem(40);
     padding: rem(130) 0;
     @media (max-width: em(1052)) {
       flex-direction: column;
@@ -40,6 +40,7 @@
   }
 
   &__item-together {
+    display: none;
     @media (max-width: em(1052)) {
       display: flex;
       justify-content: space-around;

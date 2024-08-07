@@ -1,4 +1,4 @@
-import {Component, HostBinding, inject, OnInit, Signal} from '@angular/core';
+import {Component, HostBinding, HostListener, inject, OnInit, Signal} from '@angular/core';
 import {NgClass} from "@angular/common";
 import {DynamicAdaptDirective} from "../../directives/dynamic-adapt.directive";
 import {MenuStateService} from "../../services/menu-state.service";
@@ -22,12 +22,20 @@ import {ScrollDirectionDirective} from "../../directives/scroll-direction.direct
 })
 export class HeaderComponent implements OnInit{
   @HostBinding('class.load') isLoading = false;
+  isHeaderMove = false;
+  @HostListener('document: scroll')
+  scrollFunction() {
+    this.isHeaderMove = document.body.scrollTop > 200 || document.documentElement.scrollTop > 200;
+    console.log('Scroll: ', document.documentElement.scrollTop);
+  }
   menuState = inject(MenuStateService)
    // isMenuOpen = false;
   isMenuOpen: Signal<boolean> | undefined;
   constructor() {
     this.isMenuOpen = this.menuState.menuOpen$;
   }
+
+
 
   ngOnInit() {
     setTimeout(() => {
@@ -38,5 +46,6 @@ export class HeaderComponent implements OnInit{
 
   toggleMenu() {
         this.menuState.toggleMenu()
+
     }
 }

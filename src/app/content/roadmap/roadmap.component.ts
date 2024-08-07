@@ -5,18 +5,20 @@ import {RoadmapTabletComponent} from "./roadmap-tablet/roadmap-tablet.component"
 import {RoadmapMianLineComponent} from "./roadmap-mian-line/roadmap-mian-line.component";
 import {RoadmapBgComponent} from "./roadmap-bg/roadmap-bg.component";
 import {RoadmapDesignTxtComponent} from "./roadmap-design-txt/roadmap-design-txt.component";
+import {ScrollAnimateDirective} from "../../directives/scroll-animate.directive";
 
 @Component({
   selector: 'app-roadmap',
   standalone: true,
-  imports: [
-    RoadmapTitleComponent,
-    RoadmapHeaderComponent,
-    RoadmapTabletComponent,
-    RoadmapMianLineComponent,
-    RoadmapBgComponent,
-    RoadmapDesignTxtComponent
-  ],
+    imports: [
+        RoadmapTitleComponent,
+        RoadmapHeaderComponent,
+        RoadmapTabletComponent,
+        RoadmapMianLineComponent,
+        RoadmapBgComponent,
+        RoadmapDesignTxtComponent,
+        ScrollAnimateDirective
+    ],
   templateUrl: './roadmap.component.html',
   styleUrl: './roadmap.component.scss'
 })

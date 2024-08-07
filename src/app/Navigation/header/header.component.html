@@ -1,14 +1,16 @@
-<header class="header" appScrollDirection>
-  <div class="header__container" [class.loaded]="isLoading">
+<header  [ngClass]="isHeaderMove ? 'header header--scroll' : 'header'" appScrollDirection>
+<!--<header class="header" appScrollDirection>-->
+  <div [ngClass]="isHeaderMove ? 'header__container header__container--scroll' : 'header__container'" [class.loaded]="isLoading">
+<!--    <div  [ngClass]="isHeaderMove ? 'header__body&#45;&#45;scroll' : 'header__body'">-->
     <div class="header__body">
       <div  class="header__left-items items-left anim" [class.loaded]="isLoading">
         <nav class="items-left__menu-left menu-left">
           <ul class="menu-left__list">
             <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
-              <a href="#" class="menu-left__link header-link"   appClickSmooth="home">Home</a>
+              <a href="#" class="menu-left__link header-link"  appClickSmooth="home">Home</a>
             </li>
             <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
-              <a href="#" class="menu-left__link header-link"   appClickSmooth="product">Product</a>
+              <a href="#" class="menu-left__link header-link"  appClickSmooth="product">Product</a>
             </li>
             <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
               <a href="#" class="menu-left__link header-link"  appClickSmooth="features">Features</a>

@@ -1,17 +1,93 @@
-
 <div class="contact-two">
   <div class="contact-two__content">
     <div class="contact-two__body">
-      <form class="contact-two__form form">
+      <form class="contact-two__form form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form__body">
-        <input type="text" placeholder="Your Name" class="form__input-name inp">
-        <input type="email" placeholder="Your Email" class="form__input-email inp">
-          <textarea cols="30" rows="10" placeholder="Shape your thoughts" class="form__textarea textarea"></textarea>
+
+          <div class="form__name-content input-content">
+            <input
+              formControlName="name"
+              #inputContactName
+              maxlength="100"
+              type="text"
+              autocomplete="off"
+              name="name"
+              placeholder="Your name"
+              class="form__input-name inp"
+              required>
+
+            <div class="form__name-error error-box">
+              @if (!contactForm.get('name')?.valid && contactForm.get('name')?.touched) {
+                <span
+                  class="error">{{ getContactNameErrorMessage(inputContactName.value.length || 0) }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="form__email-content input-content">
+            <input
+              formControlName="email"
+              #inputContactEmail
+              type="email"
+              maxlength="100"
+              autocomplete="off"
+              name="email"
+              placeholder="Your email"
+              class="form__input-email inp"
+              required>
+            <div class="form__email-error error-box">
+              @if (!contactForm.get('email')?.valid && contactForm.get('email')?.touched) {
+                <span
+                  class="error">{{ getContactEmailErrorMessage(inputContactEmail.value.length || 0) }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="form__text-content input-content">
+            <textarea
+              formControlName="feedback"
+              #inputContactText
+              cols="30"
+              rows="10"
+              type="text"
+              autocomplete="off"
+              name="feedback"
+              placeholder="Shape your thoughts"
+              class="form__textarea textarea"
+              (keydown)="onKeydown($event)"
+              required>
+            </textarea>
+
+            <div class="form__text-error error-box error-box--txt">
+              @if (!contactForm.get('feedback')?.valid && contactForm.get('feedback')?.touched) {
+                <span
+                  class="error">{{ getContactTextErrorMessage(inputContactText.value.length || 0) }}</span>
+              }
+            </div>
+          </div>
         </div>
-        <button class="form__btn">
+
+        <button type="submit" class="form__btn" [disabled]="!contactForm.valid">
           <a class="form__link">Shape your feedback</a>
         </button>
       </form>
+
+      <div [ngClass]="showSuccess? 'success':'success success--hide'">
+        <div [ngClass]="showSuccess? 'success__body':'success__body success__body--hide'">
+          <ul class="success__content">
+            <ul class="success__together">
+            <li class="success__item success__item--green"><i class="material-symbols-outlined">{{ 'check' }}</i></li>
+            <li class="success__item">
+              <p class="success__text">Message sent successfully</p>
+            </li>
+            </ul>
+            <ul class="success__close-list" (click)="closeSuccess()">
+              <li class="success__item-close"><i class="material-symbols-outlined">{{ 'close' }}</i></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

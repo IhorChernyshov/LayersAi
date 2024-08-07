@@ -51,6 +51,8 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   background: #070707;
   @include adaptiveValue("padding-top", 62, 40, 767.98, 479.98, 1);
+  padding-bottom: rem(100);
+  @include adaptiveValue("padding-bottom", 70, 30, 1200, 320, 1);
 
   &::before {
     content: '';
@@ -65,8 +67,7 @@ background-color: #fff;
 
   // .footer__body
   &__body {
-    //margin-bottom: rem(100);
-    //@include adaptiveValue("margin-bottom", 70, 30, 1200, 320, 1);
+
   }
 
   // .footer__container

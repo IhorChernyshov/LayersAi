@@ -1,9 +1,12 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
+import {ScrollAnimateDirective} from "../../../directives/scroll-animate.directive";
 
 @Component({
   selector: 'app-tech-stack-image',
   standalone: true,
-  imports: [],
+    imports: [
+        ScrollAnimateDirective
+    ],
   templateUrl: './tech-stack-image.component.html',
   styleUrl: './tech-stack-image.component.scss'
 })

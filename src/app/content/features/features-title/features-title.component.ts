@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {ScrollAnimateDirective} from "../../../directives/scroll-animate.directive";
 
 @Component({
   selector: 'app-features-title',
   standalone: true,
-  imports: [],
+    imports: [
+        ScrollAnimateDirective
+    ],
   templateUrl: './features-title.component.html',
   styleUrl: './features-title.component.scss'
 })

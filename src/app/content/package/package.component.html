@@ -8,7 +8,7 @@
           <li class="package___title-component " [class.loaded]="isLoading">
             <app-package-title></app-package-title>
           </li>
-          <ul class="package__flex-item">
+          <ul class="package__flex-item animated-element"  appScrollAnimate [animationClass]="'animate'" [animationDelay]="200" [threshold]="0.5">
             <li class="package___item-one-component item" [class.loaded]="isLoading">
               <app-package-item-one></app-package-item-one>
             </li>
@@ -16,7 +16,7 @@
               <app-package-item-two></app-package-item-two>
             </li>
           </ul>
-          <ul class="package__message-together">
+          <ul class="package__message-together animated-element"  appScrollAnimate [animationClass]="'animate'" [animationDelay]="200" [threshold]="0.5">
             <div class="package__bg"></div>
             <li class="package__message-title-component item" [class.loaded]="isLoading">
               <app-package-message-title></app-package-message-title>

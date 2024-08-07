@@ -89,6 +89,10 @@
     max-width: rem(220);
     aspect-ratio: 220/200;
     @include adaptiveValue("max-width", 220, 170, 452, 320);
+    /*max-width: rem(270);
+    aspect-ratio: 270/250;
+    @include adaptiveValue("max-width", 270, 220, 452, 320);*/
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -141,6 +145,7 @@
     padding-top: rem(20);
     @include adaptiveValue("padding-top", 20, 10);
     max-width: rem(220);
+    //max-width: rem(270);
     line-height: rem(25);
   }
 

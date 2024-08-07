@@ -2,5 +2,32 @@
 @import "assets/style/style";
 html {
   scroll-behavior: smooth;
-  background: url(assets/images/2.webp) 0 0 / cover no-repeat;
+  //background: url(assets/images/2.webp) 0 0 / cover no-repeat;
+  //max-width: 100%;
+  //max-height: 100%;
+
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.animated-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.opacity-element {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.opacity {
+  opacity: 1;
 }
