@@ -36,6 +36,20 @@
 //  font-display: fallback;
 //}
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./fonts/Unbounded-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 //@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 //@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 //@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
