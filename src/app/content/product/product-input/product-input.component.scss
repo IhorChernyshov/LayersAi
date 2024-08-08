@@ -15,7 +15,10 @@
   @include adaptiveValue("padding-bottom", 10, 5, 1200, 320);
   @include adaptiveValue("max-width", 700, 500, 1200, 320);
   background: #070707;
-
+  //position: relative;
+  //overflow: hidden;
+  //min-width: rem(700);
+  transition: all 1s ease 0s;
   &__text {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -23,6 +26,41 @@
     @include adaptiveValue("font-size", 21, 15);
     @include adaptiveValue("margin-right", 20, 5);
     line-height: 135%;
+    position: relative;
+    overflow: hidden;
+    height: 1.5em; // Adjust this value based on the text height
+  }
+
+  &__current, &__next {
+    //position: absolute;
+    //left: 0;
+    //top: 0;
+    //transform: translateY(-50%);
+    //white-space: nowrap;
+    transition: opacity 0.7s, transform 0.7s;
+
+  }
+
+  &__current {
+    opacity: 1;
+    transform: translateY(0);
+    display: inline-block;
+  }
+
+  &__next {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  &__current.hide {
+    opacity: 0;
+    transform: translateY(-300%);
+  }
+
+  &__next.show {
+    opacity: 1;
+    transform: translateY(-100%);
   }
 
   &__icon {

@@ -214,11 +214,17 @@
   font-weight: 400;
   font-size: rem(18);
   @include adaptiveValue("font-size", 18, 15);
-  color: #B4B4B4;
+  //color: #B4B4B4;
+  color: #8b8b8b;
   line-height: 135%;
   max-width: rem(290);
   @media (max-width: em(630)) {
     max-width: 100%;
+  }
+  span{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
   }
   &--vector {
     max-width: rem(320);
@@ -228,6 +234,10 @@
     @media (max-width: em(630)) {
       max-width: 100%;
     }
+  }
+
+  &--llm{
+    color: #B4B4B4;
   }
 
   &--rag {
