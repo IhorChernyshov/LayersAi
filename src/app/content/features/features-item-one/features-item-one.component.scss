@@ -52,7 +52,7 @@
 
   // .features-one__subtitle
   &__subtitle {
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald-SemiBold, sans-serif;
     font-weight: 600;
     @include adaptiveValue("font-size", 35, 21);
     line-height: rem(13);

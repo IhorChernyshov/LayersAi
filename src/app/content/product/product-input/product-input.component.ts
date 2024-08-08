@@ -34,6 +34,6 @@ export class ProductInputComponent  implements OnInit {
         this.nextText = this.texts[this.nextTextIndex];
         this.showCurrentText = true;
       }, 500); // Время должно соответствовать времени анимации
-    }, 5000);
+    }, 4000);
   }
 }

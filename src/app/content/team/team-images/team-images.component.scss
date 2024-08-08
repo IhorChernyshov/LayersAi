@@ -113,7 +113,7 @@
 
   // .team-images__text
   &__text {
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald-Medium, sans-serif;
     font-weight: 500;
     @include adaptiveValue("font-size", 23, 17);
     position: relative;
@@ -133,8 +133,8 @@
   // .team-images__subtext
   &__subtext {
     @include adaptiveValue("font-size", 16, 15);
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
+    font-family: Oswald-Bold, sans-serif;
+    //font-weight: 700;
     white-space: nowrap;
     letter-spacing: rem(0.8);
     color: #C9C9C9;
@@ -156,13 +156,39 @@
 
   // .team-images__skills-item
   &__skills-item {
-    p{
+    /*p{
       @include adaptiveValue("font-size", 17, 15);
-      font-family: 'Oswald', sans-serif;
+      font-family: Oswald-SemiBold, sans-serif;
       font-weight: 600;
       letter-spacing: rem(0.8);
       color: #afaeae;
       @include adaptiveValue("letter-spacing", 0.8, 0.2);
+    }*/
+    a{
+      //.icon{
+      //  max-width: rem(30);
+      //  @media (any-hover: hover) {
+      //    &:hover {
+      //      fill: red;
+      //    }
+      //  }
+      //}
     }
   }
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: #7eadf0;
+  //stroke: #004AAD;
+  transition: fill 0.3s, stroke 0.3s;
+  @media (max-width: $mobile) {
+    fill: #004AAD;
+  }
+}
+
+.icon:hover {
+  fill: #004AAD; /* Цвет при наведении */
+  //stroke: #FF0000; /* Цвет при наведении */
 }

@@ -71,9 +71,9 @@
 
   // .product-bg__design-txt
   &__design-txt {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Unbounded-Light, sans-serif;
     font-weight: 400;
-    letter-spacing: rem(0.8);
+    letter-spacing: rem(1.2);
     text-transform: uppercase;
     @include adaptiveValue("font-size", 16, 15);
     background-image: url(../../../../assets/images/hero-title2.jpg);

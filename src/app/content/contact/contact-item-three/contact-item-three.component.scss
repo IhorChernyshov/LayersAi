@@ -49,7 +49,7 @@
 
   // .item-three__title
   &__title {
-    font-family: "Inter", sans-serif;
+    font-family: Inter-Regular, sans-serif;
     font-weight: 400;
     @include adaptiveValue("font-size", 25, 19);
     line-height: 142%;
@@ -70,7 +70,7 @@
 }
 
 .txt {
-  font-family: "Inter", sans-serif;
+  font-family: Inter-Extra-Light, sans-serif;
   font-weight: 200;
   @include adaptiveValue("font-size", 17, 16);
   line-height: 142%;

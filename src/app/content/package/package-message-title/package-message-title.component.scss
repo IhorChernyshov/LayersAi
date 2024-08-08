@@ -23,7 +23,7 @@
   // .pack-title__mes-title
   &__mes-title {
     @include adaptiveValue("font-size", 54, 21);
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-SemiBold, sans-serif;
     font-weight: 600;
     color: #fff;
     @include adaptiveValue("margin-bottom", 20, 12);
@@ -31,7 +31,7 @@
     span {
       @include adaptiveValue("font-size", 54, 21);
       display: inline-block;
-      font-family: 'Inter', sans-serif;
+      font-family: Inter-SemiBold, sans-serif;
       font-weight: 600;
       color: #fff;
     }
@@ -50,7 +50,7 @@
 
 .sub {
   @include adaptiveValue("font-size", 18, 16);
-  font-family: 'Inter', sans-serif;
+  font-family: Inter-Regular, sans-serif;
   font-weight: 400;
   text-align: center;
 

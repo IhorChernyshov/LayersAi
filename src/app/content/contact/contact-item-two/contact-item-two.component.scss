@@ -76,7 +76,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Regular, sans-serif;
     font-weight: 400;
     @include adaptiveValue("font-size", 19, 17);
     letter-spacing: rem(0.8);
@@ -86,7 +86,7 @@
 
 .inp {
   max-width: rem(325);
-  font-family: 'Inter', sans-serif;
+  font-family: Inter-Light, sans-serif;
   font-weight: 300;
   background: none;
   border-bottom: rem(1) solid rgba(255, 255, 255, 0.3);
@@ -103,7 +103,7 @@
   }
 
   &::placeholder {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Medium, sans-serif;
     font-weight: 500;
     color: #C2C2C2;
     @include adaptiveValue("font-size", 16, 15);
@@ -123,7 +123,7 @@
 
 .textarea {
   max-width: rem(325);
-  font-family: 'Inter', sans-serif;
+  font-family: Inter-Light, sans-serif;
   font-weight: 300;
 
   border: rem(1) solid rgba(255, 255, 255, 0.3);
@@ -145,7 +145,7 @@
   }
 
   &::placeholder {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Medium, sans-serif;
     font-weight: 500;
     color: #C2C2C2;
     @include adaptiveValue("font-size", 16, 16);
@@ -260,7 +260,7 @@
   // .success__text
   &__text {
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Regular, sans-serif;
     font-weight: 400;
     @include adaptiveValue("font-size", 17, 16);
   }

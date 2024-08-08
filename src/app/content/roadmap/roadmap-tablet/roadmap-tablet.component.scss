@@ -92,7 +92,7 @@
 }
 
 .bold-font {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald-Medium, sans-serif;
   font-weight: 500;
   @include adaptiveValue("font-size", 17, 14);
   letter-spacing: rem(0.8);

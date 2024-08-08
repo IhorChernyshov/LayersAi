@@ -73,7 +73,7 @@
   &__text {
     position: relative;
     z-index: 11;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Regular, sans-serif;
     font-weight: 400;
     max-width: rem(360);
     line-height: 142%;
@@ -83,7 +83,7 @@
 }
 
 .item {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald-SemiBold, sans-serif;
   font-weight: 600;
   @include adaptiveValue("font-size", 64, 32);
   letter-spacing: rem(0.8);

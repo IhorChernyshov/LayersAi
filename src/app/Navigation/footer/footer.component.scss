@@ -149,7 +149,10 @@ background-color: #fff;
   height: rem(93);
   @include adaptiveValue("height", 93, 50, 767.98, 320, 1);
   align-items: center;
+  justify-content: center;
   // .social__item
   &__item {
+    font-size: rem(17);
+
   }
 }

@@ -20,7 +20,7 @@
   //min-width: rem(700);
   transition: all 1s ease 0s;
   &__text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans Regular, sans-serif;
     font-weight: 400;
     color: #D9D9D9;
     @include adaptiveValue("font-size", 21, 15);

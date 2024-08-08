@@ -84,7 +84,7 @@
     border-radius: rem(0) rem(25) rem(0) rem(0);
     padding: rem(15) rem(15) rem(15) rem(15) ;
     @include adaptiveValue("font-size", 16, 15);
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald-SemiBold, sans-serif;
     font-weight: 600;
   }
 
@@ -117,7 +117,7 @@
 
   &::placeholder {
     @include adaptiveValue("font-size", 17, 15);
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald-Medium, sans-serif;
     font-weight: 500;
     color: #929090;
     transition: opacity 0.3s ease 0s;
@@ -231,7 +231,7 @@
   // .success__text
   &__text {
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Regular, sans-serif;
     font-weight: 400;
     @include adaptiveValue("font-size", 17, 16);
   }
