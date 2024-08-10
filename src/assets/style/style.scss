@@ -273,9 +273,10 @@ $mobileSmall: em(479.98); // Телефоны S
 body {
 
   color: $mainColor;
-  //background-color: $bgWhite;
-
-  //background: url(../../assets/images/main-bg.jpg) 0 0 / cover no-repeat;
+  //background-color: #021242;
+  background: linear-gradient(135deg, #040A18 0%, #01277F 100%);
+  background-size: cover;
+  //background: url(../../assets/images/2.webp) 0 0 / cover no-repeat;
   @keyframes bg-animation {
     0% {
       background-position: left
