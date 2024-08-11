@@ -23,7 +23,7 @@ export class VideoChatComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.videoPlayer.nativeElement.muted = true; // Убедитесь, что видео отключено
     this.videoPlayer.nativeElement.play().catch((error: any) => {
       console.log('Autoplay was prevented:', error);
