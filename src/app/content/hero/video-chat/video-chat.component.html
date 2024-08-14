@@ -15,7 +15,7 @@
 
       </div>
 
-        <video #videoPlayer autoplay muted loop class="video__main-video" [class.loaded]="isLoading" controlslist="nodownload noremoteplayback noplaybackrate foobar" disablepictureinpicture controls="controls">
+        <video #videoPlayer autoplay muted playsinline loop class="video__main-video" [class.loaded]="isLoading" >
           <source src="/clip.mp4" type="video/mp4" >
         </video>
 

@@ -81,13 +81,12 @@
 
     &.loaded {
       font-size: rem(180);
-      @include adaptiveValue("font-size", 180, 40, 1200, 320.98, 1);
+      @include adaptiveValue("font-size", 180, 30, 1200, 320.98, 1);
     }
 
     &.load {
       transition: all 1s ease 0s;
       font-size: rem(180);
-      @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
       @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
     }
   }
@@ -99,7 +98,7 @@
 
     &.loaded {
       font-size: rem(180);
-      @include adaptiveValue("font-size", 180, 40, 1200, 320.98, 1);
+      @include adaptiveValue("font-size", 180, 30, 1200, 320.98, 1);
     }
 
     &.load {

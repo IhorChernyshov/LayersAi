@@ -36,6 +36,7 @@
       position: absolute;
       width: rem(2);
       height: 100%;
+      max-height: rem(51.33);
       top: 0;
       left: 83%;
       z-index: 2;
@@ -145,11 +146,13 @@
 }
 
 .error-box {
-  position: absolute;
-  bottom: -30%;
-  left: 0;
+  //position: absolute;
+  //bottom: -30%;
+  //left: 0;
   color: #ff3300;
+  z-index: 3;
   &--txt{
+    position: absolute;
     bottom: -20%;
     left: 1%;
   }

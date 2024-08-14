@@ -17,9 +17,13 @@
               class="form__input message"
               required
             >
-            <button type="submit" class="form__btn" [disabled]="!packageForm.valid"><a class="form__link">Send</a></button>
+            @if (!packageForm.get('email')?.valid && packageForm.get('email')?.touched) {
+            <button type="submit" class="form__btn" style="top: 40%" [disabled]="!packageForm.valid"><a class="form__link">Send</a></button>
+            }@else{
+              <button type="submit" class="form__btn"  [disabled]="!packageForm.valid"><a class="form__link">Send</a></button>
+          }
 
-            <div class="form__email-error error-box">
+            <div class="form__email-error error-box ">
               @if (!packageForm.get('email')?.valid && packageForm.get('email')?.touched) {
                 <span
                   class="error">{{ getPackageEmailErrorMessage(inputPackageEmail.value.length || 0) }}</span>

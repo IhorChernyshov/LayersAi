@@ -9,7 +9,7 @@ import {AfterViewInit, Component, ElementRef, HostBinding, OnInit, ViewChild} fr
 })
 export class VideoChatComponent implements OnInit, AfterViewInit {
   @HostBinding('class.load') isLoading = false;
-  @ViewChild('videoPlayer') videoPlayer: ElementRef<HTMLVideoElement> | any;
+  @ViewChild('videoPlayer', { static: true }) videoPlayer: ElementRef<HTMLVideoElement> | any;
 
   constructor() {
   }
@@ -23,12 +23,13 @@ export class VideoChatComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.isLoading = true;
     this.videoPlayer.nativeElement.muted = true; // Убедитесь, что видео отключено
-    this.videoPlayer.nativeElement.play().catch((error: any) => {
-      console.log('Autoplay was prevented:', error);
-      this.videoPlayer.nativeElement.addEventListener('click', () => {
-        this.videoPlayer.nativeElement.play();
+    this.videoPlayer.nativeElement.addEventListener('canplaythrough', () => {
+      this.videoPlayer.nativeElement.play().catch((error: any) => {
+        console.log('Autoplay was prevented:', error);
+        this.videoPlayer.nativeElement.addEventListener('click', () => {
+          this.videoPlayer.nativeElement.play();
+        });
       });
     });
   }

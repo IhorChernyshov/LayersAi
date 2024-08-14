@@ -26,6 +26,7 @@
 
   // .hero__title-component
   &__title-component {
+    @media (min-width: em(600)) {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -67,6 +68,19 @@
       position: relative;
       height: unset;
     }
+
+    }
+    @media (max-width: em(600.98)) {
+      opacity: 0;
+      transition: all 1s ease 0s;
+      &.loaded {
+        opacity: 1;
+      }
+      &.load {
+        opacity: 1;
+      }
+    }
+
   }
 
   // .hero__design-component

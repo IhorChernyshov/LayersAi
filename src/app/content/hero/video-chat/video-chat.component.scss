@@ -36,7 +36,7 @@
     top: 0;
     left: 2%;
     @include adaptiveValue("width", 335, 280, 600, 320);
-
+    @include adaptiveValue("top", 0, 20, 460, 320);
     &--bottom {
       top: 95%;
       left: 45%;
@@ -45,11 +45,13 @@
       }
       @include adaptiveValue("left", 200, 0, 600, 320);
       @include adaptiveValue("width", 335, 280, 600, 320);
+      @include adaptiveValue("top", 0, 20, 460, 320);
 
       &.loadedt {
         opacity: 1;
         top: 105%;
         transition: all 1s ease 1.6s;
+        @include adaptiveValue("top", 315, 258, 460, 320);
       }
     }
 
@@ -59,6 +61,7 @@
       opacity: 1;
       top: -5%;
       transition: all 1s ease 1.6s;
+      @include adaptiveValue("top", 0, 30, 460, 320);
     }
   }
 
@@ -71,10 +74,13 @@
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+
     transform: translate(-50%, -50%);
     z-index: -1;
+    @media (min-width: em(560)) {
+      height: 100%;
+      object-fit: cover;
+    }
 
     img {
       width: 100%;

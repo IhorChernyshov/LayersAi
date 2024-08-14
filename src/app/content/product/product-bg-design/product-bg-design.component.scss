@@ -31,13 +31,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include adaptiveValue("max-width", 240, 180, 600, 320);
+    @include adaptiveValue("max-width", 240, 215, 600, 320);
   }
 &__line {
   position: absolute;
   top: 0;
   left: 0;
   transform: rotate(180deg);
+  @include adaptiveValue("max-height", 60, 30, 600, 320);
   }
 
   &__sec-line{
@@ -46,6 +47,8 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+
+    @include adaptiveValue("max-height", 60, 30, 600, 320);
   }
 
 
@@ -56,7 +59,8 @@
     padding: rem(35) rem(10) rem(15) rem(10);
     text-align: center;
     position: relative;
-
+@include adaptiveValue("padding-top", 35, 20, 600, 320);
+@include adaptiveValue("padding-bottom", 15, 10, 600, 320);
     &::after {
       content: '';
       position: absolute;
@@ -75,7 +79,7 @@
     font-weight: 400;
     letter-spacing: rem(1.2);
     text-transform: uppercase;
-    @include adaptiveValue("font-size", 16, 15);
+    @include adaptiveValue("font-size", 16, 12);
     background-image: url(../../../../assets/images/hero-title2.jpg);
     background-size: 200%;
     background-repeat: repeat;

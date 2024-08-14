@@ -6,14 +6,17 @@
       <div  class="header__left-items items-left anim" [class.loaded]="isLoading">
         <nav class="items-left__menu-left menu-left">
           <ul class="menu-left__list">
-            <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
+            <!--<li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
               <a href="#" class="menu-left__link header-link"  appClickSmooth="home">Home</a>
-            </li>
+            </li>-->
             <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
               <a href="#" class="menu-left__link header-link"  appClickSmooth="product">Product</a>
             </li>
             <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
               <a href="#" class="menu-left__link header-link"  appClickSmooth="features">Features</a>
+            </li>
+            <li appDynamicAdapt=".menu__list, 991.98" class="menu-left__item header-item">
+              <a href="#" class="menu-left__link header-link"  appClickSmooth="package">Packages</a>
             </li>
           </ul>
         </nav>
@@ -23,7 +26,7 @@
         <nav class="logo__menu menu-logo">
           <ul class="menu-logo__list">
             <li class="menu-logo__item">
-              <a href="#" class="menu-logo__logo" [class.loaded]="isLoading">Profactum.AI</a>
+              <a href="#" class="menu-logo__logo" appClickSmooth="home" [class.loaded]="isLoading">Profactum.AI</a>
             </li>
           </ul>
         </nav>

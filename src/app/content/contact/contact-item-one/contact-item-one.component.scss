@@ -24,16 +24,18 @@
 
   &__bg {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: -5%;
     aspect-ratio: 364/413;
-    max-width: rem(364);
-    min-width: rem(364);
-    max-height: rem(408);
-    object-fit: cover;
     z-index: 10;
+    @media (min-width: em(1052.98)) {
+      width: 100%;
+      height: 100%;
+      max-width: rem(364);
+      min-width: rem(364);
+      max-height: rem(408);
+      object-fit: cover;
+    }
   }
 
   // .contact-item-one__one-box
