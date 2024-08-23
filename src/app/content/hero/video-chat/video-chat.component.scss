@@ -50,8 +50,12 @@
       &.loadedt {
         opacity: 1;
         top: 105%;
-        transition: all 1s ease 1.6s;
+          transition: all 1s ease 1.6s;
         @include adaptiveValue("top", 315, 258, 460, 320);
+        //@media (max-width: em(600)) {
+        //  transition: all 0.5s ease 1s;
+        //  z-index: -1;
+        //}
       }
     }
 
@@ -76,7 +80,7 @@
     width: 100%;
 
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1;
     @media (min-width: em(560)) {
       height: 100%;
       object-fit: cover;

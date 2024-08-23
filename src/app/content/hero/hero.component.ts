@@ -32,6 +32,7 @@ export class HeroComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(document.documentElement.offsetWidth > 600){
     setTimeout(() => {
       this.isLoading = true;
     }, 10);
@@ -45,6 +46,23 @@ export class HeroComponent implements OnInit {
     setTimeout(() => {
       this.isDone = true;
     },3300)
+  }else{
+      setTimeout(() => {
+        this.isLoading = true;
+      }, 10);
+      setTimeout(() => {
+        if (this.isLoading) {
+          this.isLoading = false;
+          this.isLoaded = true;
+          console.log('!Load')
+        }
+        // }, 2900);
+      }, 500);
+      setTimeout(() => {
+        this.isDone = true;
+        console.log('!Done')
+      },700)
+    }
   }
 
  /* ngOnInit() {

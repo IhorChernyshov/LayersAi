@@ -19,7 +19,7 @@
     //min-height: 695px;
     @include adaptiveValue("min-height", 906, 906);
 
-    &.done{
+    &.done {
       min-height: 100%;
     }
   }
@@ -27,47 +27,47 @@
   // .hero__title-component
   &__title-component {
     @media (min-width: em(600)) {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    &.loaded {
+      position: absolute;
       left: 50%;
-      top: 11.7%;
-      transform: translate(-50%, 0);
-      transition: all 1s ease 1.3s;
+      top: 50%;
+      transform: translate(-50%, -50%);
 
-      @media (max-width: em(991.98)) {
-        top: 13.2%;
+      &.loaded {
+        left: 50%;
+        top: 11.7%;
+        transform: translate(-50%, 0);
+        transition: all 1s ease 1.3s;
+
+        @media (max-width: em(991.98)) {
+          top: 13.2%;
+        }
+
+        @media (max-width: em(800.98)) {
+          top: 13.2%;
+        }
+
+        @media (max-width: em(750.98)) {
+          top: 13%;
+        }
+
+        @media (max-width: em(700.98)) {
+          top: 13.2%;
+        }
+
+
+        @media (max-width: em(650.98)) {
+          top: 12.9%;
+        }
+
+        @media (max-width: em(450.98)) {
+          top: 12.5%;
+        }
       }
 
-      @media (max-width: em(800.98)) {
-        top: 13.2%;
+      &.load {
+        position: relative;
+        height: unset;
       }
-
-      @media (max-width: em(750.98)) {
-        top: 13%;
-      }
-
-       @media (max-width: em(700.98)) {
-        top: 13.2%;
-      }
-
-
-      @media (max-width: em(650.98)) {
-        top: 12.9%;
-      }
-
-      @media (max-width: em(450.98)) {
-        top: 12.5%;
-      }
-    }
-
-    &.load {
-      position: relative;
-      height: unset;
-    }
 
     }
     @media (max-width: em(600.98)) {
@@ -90,6 +90,7 @@
     align-items: center;
     opacity: 1;
     min-height: rem(55);
+
     &.loaded {
       opacity: 0;
       min-height: rem(55);
@@ -108,23 +109,23 @@
     justify-content: flex-start;
     align-items: center;
     opacity: 0;
-       min-height: rem(88);
+    min-height: rem(88);
 
     &.load {
       opacity: 1;
       transition: all 1s ease 0s;
-         min-height: rem(88);
+      min-height: rem(88);
     }
   }
 
   // .hero__video-component
   &__video-component {
     opacity: 1;
-       min-height: rem(300);
+    min-height: rem(300);
 
     &.loaded {
       opacity: 0;
-         min-height: rem(300);
+      min-height: rem(300);
     }
 
     &.load {
@@ -144,11 +145,11 @@
     @media (max-width: em(1050)) {
       padding-top: rem(40);
     }
-       min-height: rem(30);
+    min-height: rem(30);
     opacity: 0;
 
     &.loaded {
-         min-height: rem(30);
+      min-height: rem(30);
       opacity: 0;
     }
 

@@ -8,7 +8,7 @@ import {AfterViewInit, Component, ElementRef, HostBinding, OnInit, ViewChild} fr
   styleUrl: './video-chat.component.scss'
 })
 export class VideoChatComponent implements OnInit, AfterViewInit {
-  @HostBinding('class.load') isLoading = false;
+  @HostBinding('class.load') isLoading = true;
   @ViewChild('videoPlayer', { static: true }) videoPlayer: ElementRef<HTMLVideoElement> | any;
 
   constructor() {
@@ -18,7 +18,7 @@ export class VideoChatComponent implements OnInit, AfterViewInit {
 
     setTimeout(() => {
       this.isLoading = true;
-    }, 10);
+    }, 500);
 
   }
 

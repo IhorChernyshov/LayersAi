@@ -76,35 +76,39 @@
     color: transparent;*/
 
   &--hero {
-    font-size: rem(80);
-    @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
-
-    &.loaded {
-      font-size: rem(180);
-      @include adaptiveValue("font-size", 180, 30, 1200, 320.98, 1);
+    @media (min-width: em(600)) {
+      font-size: rem(80);
+      @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
+      &.loaded {
+        font-size: rem(180);
+        @include adaptiveValue("font-size", 180, 30, 1200, 320.98, 1);
+      }
     }
-
     &.load {
       transition: all 1s ease 0s;
-      font-size: rem(180);
-      @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
+      @media (min-width: em(600)) {
+        font-size: rem(80);
+        @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
+      }
     }
   }
 
 
   &--hero-3 {
-    font-size: rem(80);
-    @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
-
-    &.loaded {
-      font-size: rem(180);
-      @include adaptiveValue("font-size", 180, 30, 1200, 320.98, 1);
-    }
-
-    &.load {
-      transition: all 1s ease 0s;
+    @media (min-width: em(600)) {
       font-size: rem(80);
       @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
+      &.loaded {
+        font-size: rem(180);
+        @include adaptiveValue("font-size", 180, 30, 1200, 320.98, 1);
+      }
+    }
+    &.load {
+      transition: all 1s ease 0s;
+      @media (min-width: em(600)) {
+      font-size: rem(80);
+      @include adaptiveValue("font-size", 80, 35, 1200, 320.98, 1);
+      }
     }
   }
 
