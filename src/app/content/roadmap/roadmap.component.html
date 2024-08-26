@@ -8,10 +8,10 @@
         <li class="roadmap__title-component item" [class.loaded]="isLoading">
           <app-roadmap-title></app-roadmap-title>
         </li>
-        <li class="roadmap__tablet-component item animated-element"  appScrollAnimate [animationClass]="'animate'" [animationDelay]="200" [threshold]="0.5" [class.loaded]="isLoading">
+        <li class="roadmap__tablet-component item opacity-element"  appScrollAnimate [animationClass]="'opacity'" [animationDelay]="200" [threshold]="0.5" [class.loaded]="isLoading">
           <app-roadmap-tablet></app-roadmap-tablet>
         </li>
-        <ul class="roadmap__together animated-element"  appScrollAnimate [animationClass]="'animate'" [animationDelay]="200" [threshold]="0.5">
+        <ul class="roadmap__together opacity-element"  appScrollAnimate [animationClass]="'opacity'" [animationDelay]="200" [threshold]="0.5">
           <li class="roadmap__main-line-component item" [class.loaded]="isLoading">
             <app-roadmap-mian-line></app-roadmap-mian-line>
           </li>
