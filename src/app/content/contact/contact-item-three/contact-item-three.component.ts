@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class ContactItemThreeComponent {
 
-  email = 'profactum.@gmail.com'
+  email = 'profactum.ai@gmail.com'
 }

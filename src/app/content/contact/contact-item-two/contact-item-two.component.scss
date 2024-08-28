@@ -85,6 +85,7 @@
 }
 
 .inp {
+  position: relative;
   max-width: rem(325);
   font-family: Inter-Light, sans-serif;
   font-weight: 300;
@@ -118,6 +119,16 @@
     padding-left: rem(10);
     border-bottom: rem(2) solid #D9D9D9;
     outline: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      bottom: 0;
+      left: 0;
+             background-color: #D9D9D9;
+    }
   }
 }
 
@@ -181,6 +192,7 @@
 
   &--txt {
     top: 73%;
+    @include adaptiveValue("top", 105, 100, 1350, 320);
   }
 }
 
@@ -198,17 +210,19 @@
 .success {
   position: absolute;
   width: 100%;
- @include adaptiveValue("top", -100, -70);
+  @include adaptiveValue("top", -100, -70);
   left: 0;
   opacity: 1;
   animation: fadeInShadow 0.5s linear;
   transition: all 0.5s ease;
-  &--hide{
+
+  &--hide {
     //display: none;
     opacity: 0;
     transition: all 0.5s ease;
     visibility: hidden;
   }
+
   // .success__body
   &__body {
     padding: rem(5) rem(5);
@@ -217,7 +231,8 @@
     opacity: 1;
     transform: scale(1);
     animation: fadeIn 0.5s linear;
-    &--hide{
+
+    &--hide {
       opacity: 0;
       transform: scale(0.9);
       transition: all 0.5s ease;
@@ -253,7 +268,7 @@
     }
   }
 
-  &__item-close{
+  &__item-close {
     //padding: 0 rem(5) 0 0;
   }
 
@@ -280,6 +295,7 @@
     transform: scale(1);
   }
 }
+
 @keyframes fadeInShadow {
   from {
     opacity: 0;
