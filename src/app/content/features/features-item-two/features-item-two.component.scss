@@ -41,7 +41,7 @@
       position: absolute;
       width: 100%;
       //max-width: rem(310);
-      @include adaptiveValue("max-width", 330, 200);
+      @include adaptiveValue("max-width", 295, 170);
       height: rem(2);
       @include adaptiveValue("bottom", -30, -15);
       left: rem(30);
